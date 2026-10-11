@@ -11,16 +11,18 @@ const company = JSON.parse(configScript.replace(/^window\.FIRM_CONFIG\s*=\s*/, '
 const publicUrl = new URL(company.publicUrl);
 const basePath = publicUrl.pathname.replace(/\/?$/, '/');
 const origin = publicUrl.origin + basePath.replace(/\/$/, '');
-const routes = {sv:'/',en:'/en/'};
-const titles = {sv:'Redovisning & ekonomisk rådgivning',en:'Accounting & financial advice'};
+const routes = Object.fromEntries(Object.keys(copy).map(language => [language, language === 'sv' ? '/' : '/' + language + '/']));
 const get = (object, key) => key.split('.').reduce((item, part) => item?.[part], object);
 const escape = value => String(value).replace(/[&<>"']/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
 for (const [language, route] of Object.entries(routes)) {
   const text = copy[language];
   const name = company.name[language] || company.legalName;
-  if (!name) throw new Error('Company name is required in both languages.');
+  if (!name) throw new Error('Company name is required for ' + language + '.');
   const translate = value => value.replaceAll('{{company}}', name);
   let html = source.replace(/<html lang="[^"]+">/, `<html lang="${language}">`);
+  html = html.replace('aria-label="Main navigation"', 'aria-label="' + escape(text.navigation.mainLabel) + '"');
+  html = html.replace('aria-label="Mobile navigation"', 'aria-label="' + escape(text.navigation.mobileLabel) + '"');
+  html = html.replace(/(<select id="language">)[\s\S]*?<\/select>/, (_, open) => open + Object.keys(routes).map(code => `<option value="${code}" title="${escape(copy[code].languageName)}"${code === language ? ' selected' : ''}>${code.toUpperCase()}</option>`).join('') + '</select>');
   html = html.replaceAll('="/assets/', `="${basePath}assets/`);
   html = html.replace(/<([a-z0-9-]+)([^>]*\bdata-t="([^"]+)"[^>]*)>[\s\S]*?<\/\1>/g, (_, tag, attributes, key) => {
     const value = get(text, key);
@@ -60,11 +62,11 @@ for (const [language, route] of Object.entries(routes)) {
     html = html.replace(/(<span data-t="booking.submit">)[\s\S]*?<\/span>/, (_, open) => open + escape(text.booking.liveSubmit) + '</span>');
     html = html.replace(/(<button[^>]*class="[^"]*contact-book[^"]*"[^>]*><span[^>]*>)[\s\S]*?<\/span>/, (_, open) => open + escape(text.navigation.book) + '</span>');
   }
-  html = html.replace(/<title>[\s\S]*?<\/title>/, `<title>${escape(titles[language])} | ${escape(name)}</title>`);
+  html = html.replace(/<title>[\s\S]*?<\/title>/, `<title>${escape(text.metaTitle)} | ${escape(name)}</title>`);
   html = html.replace(/<meta name="description"[^>]*>/, `<meta name="description" content="${escape(text.hero.subtitle)}">`);
   html = html.replace(/<link rel="canonical"[^>]*>/, `<link rel="canonical" href="${origin}${route}">`);
   const alternates = Object.entries(routes).map(([code, pathname]) => `<link rel="alternate" hreflang="${code}" href="${origin}${pathname}">`).join('\n');
-  html = html.replace('</head>', `<meta name="site-base" content="${basePath}">\n${alternates}\n<link rel="alternate" hreflang="x-default" href="${origin}/">\n<meta property="og:title" content="${escape(titles[language])} | ${escape(name)}">\n<meta property="og:description" content="${escape(text.hero.subtitle)}">\n<meta property="og:url" content="${origin}${route}">\n<meta property="og:type" content="website">\n</head>`);
+  html = html.replace('</head>', `<meta name="site-base" content="${basePath}">\n${alternates}\n<link rel="alternate" hreflang="x-default" href="${origin}/">\n<meta property="og:title" content="${escape(text.metaTitle)} | ${escape(name)}">\n<meta property="og:description" content="${escape(text.hero.subtitle)}">\n<meta property="og:url" content="${origin}${route}">\n<meta property="og:type" content="website">\n</head>`);
   const target = path.join(output, route);
   fs.mkdirSync(target, {recursive:true});
   fs.writeFileSync(path.join(target, 'index.html'), html);
@@ -75,4 +77,4 @@ for (const [language, route] of Object.entries(routes)) {
 }
 fs.writeFileSync(path.join(output, 'robots.txt'), `User-agent: *\nAllow: /\nSitemap: ${origin}/sitemap.xml\n`);
 fs.writeFileSync(path.join(output, 'sitemap.xml'), `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${Object.values(routes).map(route => `<url><loc>${origin}${route}</loc></url>`).join('')}</urlset>\n`);
-console.log('Prepared and validated 2 language pages, Swedish alias, sitemap and robots.');
+console.log('Prepared and validated ' + Object.keys(routes).length + ' language pages, Swedish alias, sitemap and robots.');

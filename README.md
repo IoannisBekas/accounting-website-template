@@ -1,6 +1,6 @@
 # Accounting website template
 
-A reusable accounting-office demo by BISOLUTIONS.GROUP. Neutral branding, a green palette, animated financial graphics, original photographic collages and a 0–100% loading screen. Swedish is the default; English is the only other language.
+A reusable accounting-office demo by BISOLUTIONS.GROUP. Neutral branding, a green palette, animated financial graphics, original photographic collages and a 0–100% loading screen. Five languages: Swedish (default), English, Greek, German and French.
 
 Live demo: https://ioannisbekas.github.io/accounting-website-template/
 
@@ -11,10 +11,10 @@ Publish development to GitHub only. Do not save or deploy to ChatGPT Sites.
 ## Customize for a buyer
 
 1. Copy this source into a separate repository for the buyer.
-2. Edit `docs/assets/company.js`. Set both `name.sv` and `name.en` to the buyer's trading name, and `legalName` to its registered name when applicable.
+2. Edit `docs/assets/company.js`. Set the trading name in all five `name` entries (`sv`, `en`, `el`, `de`, `fr`), and `legalName` to its registered name when applicable.
 3. Fill in the confirmed email, phone, `phoneUri` (for example `tel:+46000000000`), registration number, address and localized office hours. Empty values are omitted on a live client site. No real contact details are included in this demo.
 4. To use the buyer's logo, put it in `docs/assets/` and set `logo` to `assets/client-logo.svg` (PNG also works). The default ledger symbol and text wordmark are replaced in the header, about section and footer. Replace `docs/assets/favicon.svg` to match.
-5. Edit services and other wording in `docs/assets/copy.js` for both languages. `{{company}}` automatically uses the configured localized company name. Confirm that every advertised service is offered by the buyer.
+5. Edit services and other wording in `docs/assets/copy.js` for all five languages. `{{company}}` automatically uses the configured localized company name. Each locale includes a translated `metaTitle` for search and sharing. Confirm that every advertised service is offered by the buyer.
 6. Set `publicUrl` to the buyer's final HTTPS URL, including its repository subpath if hosted on GitHub Pages. The build derives asset paths, canonical links, sitemap and language links from it.
 7. Set `demo` to `false` before publishing the buyer's site. Configure an email recipient to enable appointment requests. Review `appointmentDays` (0 = Sunday, 6 = Saturday) and `timeSlots`; these are preferred request times, not confirmed availability.
 8. Run `node prepare-site.mjs`, preview the result and publish `docs/`.
@@ -25,7 +25,7 @@ A map is shown only when an address or `mapQuery` is configured. A neutral map p
 
 ## Design and source
 
-The site uses plain HTML, CSS and JavaScript with no dependencies or bundler. Node.js 22 or newer runs the preparation script. Edit `index.template.html` and run the script to regenerate root, Swedish alias (`sv/`) and English (`en/`) pages.
+The site uses plain HTML, CSS and JavaScript with no dependencies or bundler. Node.js 22 or newer runs the preparation script. Edit `index.template.html` and run the script to regenerate the Swedish root, Swedish alias (`sv/`), English (`en/`), Greek (`el/`), German (`de/`) and French (`fr/`) pages. Language selection keeps the current section, and each localized page has matching canonical and alternate-language links.
 
 The palette is forest green `#165343`, light green `#b4e080`, green ink `#183429` and off-white `#f4f7f1`. Main colors are in `docs/assets/styles.css`; illustration colors are in the template, and collage recoloring is in its `collage-green` SVG filter.
 

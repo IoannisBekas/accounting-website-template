@@ -2,11 +2,10 @@
   'use strict';
   const copy = window.EKO_COPY;
   const business = window.FIRM_CONFIG;
-  const languages = ['sv', 'en'];
+  const languages = Object.keys(copy);
   const basePath = document.querySelector('meta[name="site-base"]').content;
   const origin = new URL(basePath, location.origin).href.replace(/\/$/, '');
   const icons = ['book', 'file', 'chart', 'advice'];
-  const titles = {sv:'Redovisning & ekonomisk rådgivning',en:'Accounting & financial advice'};
   const timeSlots = business.timeSlots;
   const bookingAvailable = business.demo || Boolean(business.email);
   const pathLanguage = location.pathname.slice(basePath.length).split('/').filter(Boolean)[0];
@@ -59,6 +58,8 @@
     else phoneLink.removeAttribute('href');
     document.documentElement.lang = language;
     languageSelect.value = language;
+    document.querySelector('.desktop-nav').setAttribute('aria-label', text.navigation.mainLabel);
+    mobileMenu.setAttribute('aria-label', text.navigation.mobileLabel);
     document.querySelectorAll('[data-t]').forEach(element => {
       const value = get(text, element.dataset.t);
       if (typeof value === 'string') element.textContent = value;
@@ -110,7 +111,7 @@
     document.querySelector('.form-note').textContent = business.demo ? text.booking.demoNote : text.booking.liveNote;
     form.querySelector('[type="submit"] span').textContent = business.demo ? text.booking.submit : text.booking.liveSubmit;
     document.querySelector('.contact-book span').textContent = business.demo ? text.contact.cta : text.navigation.book;
-    document.title = `${titles[language]} | ${companyName()}`;
+    document.title = `${text.metaTitle} | ${companyName()}`;
     document.querySelector('meta[name="description"]').content = text.hero.subtitle;
     document.querySelector('link[rel="canonical"]').href = `${origin}${language === 'sv' ? '/' : `/${language}/`}`;
     document.querySelector('meta[property="og:title"]').content = document.title;

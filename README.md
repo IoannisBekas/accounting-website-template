@@ -1,25 +1,40 @@
-# K.Y Redovisning & Ekonomi AB website
+# Accounting website template
 
-A responsive, bilingual accounting website with a Visify-inspired visual direction and original K.Y content.
+A reusable accounting-office demo by BISOLUTIONS.GROUP. Neutral branding, a green palette, animated financial graphics, original photographic collages and a 0–100% loading screen. Swedish is the default; English is the only other language.
 
-Public website: https://ioannisbekas.github.io/ky-redovisning/
+Live demo: https://ioannisbekas.github.io/accounting-website-template/
 
-Repository: https://github.com/IoannisBekas/ky-redovisning
+Repository: https://github.com/IoannisBekas/accounting-website-template
 
-Publish updates to this GitHub repository only. Do not save or deploy development to ChatGPT Sites.
+Publish development to GitHub only. Do not save or deploy to ChatGPT Sites.
 
-The green palette uses forest green `#165343`, light green `#b4e080`, green ink `#183429` and off-white `#f4f7f1`.
+## Customize for a buyer
 
-GitHub Pages serves `docs` from the `main` branch. The site uses plain HTML, CSS and JavaScript; no dependencies or bundler are needed. Swedish is the default at `/ky-redovisning/`, with an alias at `/ky-redovisning/sv/`. English is available at `/ky-redovisning/en/`.
+1. Copy this source into a separate repository for the buyer.
+2. Edit `docs/assets/company.js`. Set both `name.sv` and `name.en` to the buyer's trading name, and `legalName` to its registered name when applicable.
+3. Fill in the confirmed email, phone, `phoneUri` (for example `tel:+46000000000`), registration number, address and localized office hours. Empty values are omitted on a live client site. No real contact details are included in this demo.
+4. To use the buyer's logo, put it in `docs/assets/` and set `logo` to `assets/client-logo.svg` (PNG also works). The default ledger symbol and text wordmark are replaced in the header, about section and footer. Replace `docs/assets/favicon.svg` to match.
+5. Edit services and other wording in `docs/assets/copy.js` for both languages. `{{company}}` automatically uses the configured localized company name. Confirm that every advertised service is offered by the buyer.
+6. Set `publicUrl` to the buyer's final HTTPS URL, including its repository subpath if hosted on GitHub Pages. The build derives asset paths, canonical links, sitemap and language links from it.
+7. Set `demo` to `false` before publishing the buyer's site. Configure an email recipient to enable appointment requests. Review `appointmentDays` (0 = Sunday, 6 = Saturday) and `timeSlots`; these are preferred request times, not confirmed availability.
+8. Run `node prepare-site.mjs`, preview the result and publish `docs/`.
 
-Edit `index.template.html`, `docs/assets/styles.css`, `docs/assets/app.js` and the text in `docs/assets/copy.js`. Run `node prepare-site.mjs` to update the localized HTML pages and metadata before committing changes. Node.js 22 or newer is recommended for this preparation script.
+The demo form creates a local preview only: it sends nothing, stores nothing and makes no appointment. In live mode, the form prepares a message in the visitor's email app; the visitor must send it, and the office must confirm any appointment. It is not a server-backed booking service. With no configured email, live-mode booking buttons are disabled.
 
-Motion is in `docs/assets/motion.js` and `motion.css`: word-by-word scroll entrances, an original animated financial SVG collage, drawn annotations, pointer/scroll depth and lime hover shadows. Animations pause offscreen and can be paused by the visitor. The operating system's reduced-motion preference is respected. All graphics remain visible without the motion script.
+A map is shown only when an address or `mapQuery` is configured. A neutral map placeholder appears in demo mode. Demo structured data describes a WebSite; live-mode AccountingService data includes only configured business details.
 
-Phone, email and opening hours are intentionally blank. Booking buttons and email submission are disabled until a recipient address is configured in the common copy data. The visiting address is Myrstuguvägen 145, 143 32 Vårby; organisation number 559337-5149.
+## Design and source
 
-Original K.Y vector wordmarks and a matching favicon replace the previous brand assets. These are redesign artwork, rather than an existing official company logo. DM Sans and Mynerve remain bundled with their license files.
+The site uses plain HTML, CSS and JavaScript with no dependencies or bundler. Node.js 22 or newer runs the preparation script. Edit `index.template.html` and run the script to regenerate root, Swedish alias (`sv/`) and English (`en/`) pages.
 
-Three original grayscale photographic collages introduce everyday bookkeeping, year-end accounts and advisory services. The artwork was generated with the built-in image generation tool and is decorative; the multilingual captions provide all service information. Layout and gentle drift animation are in `docs/assets/collage.css`. Existing pause, visibility and reduced-motion controls apply.
+The palette is forest green `#165343`, light green `#b4e080`, green ink `#183429` and off-white `#f4f7f1`. Main colors are in `docs/assets/styles.css`; illustration colors are in the template, and collage recoloring is in its `collage-green` SVG filter.
 
-The 0–100% loading screen in `docs/assets/loader.js` and `loader.css` waits for eager image decoding and both fonts before revealing the page and starting its motion. Progress measures completed readiness tasks, rather than download bytes. Failed assets settle and a 20-second bootstrap failsafe prevents permanent blocking; without JavaScript the website remains visible. Google Maps loads independently.
+Motion lives in `motion.js`, `motion.css` and `collage.css`. It pauses offscreen, has a visitor pause control and respects reduced motion. The loader waits for eager image decoding and both fonts; its percentage counts completed readiness tasks, rather than download bytes. Failed assets settle and a 20-second failsafe prevents permanent blocking. Google Maps loads independently.
+
+The grayscale photographic collages are original AI-generated decorative artwork. DM Sans and Mynerve are bundled with their font license files; keep those files when distributing the site. The centered BISOLUTIONS.GROUP credit links to https://www.bisolutions.group/.
+
+## GitHub Pages
+
+For each buyer repository, select the `main` branch and `/docs` folder under Settings → Pages. Commit the generated pages and assets together. For a custom domain, configure it in GitHub Pages and update `publicUrl` before rebuilding.
+
+For a local preview of this demo, serve a parent folder containing `accounting-website-template/` with the contents of `docs/` inside it, so the generated repository asset path resolves.

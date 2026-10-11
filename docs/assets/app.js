@@ -1,12 +1,14 @@
 (() => {
   'use strict';
   const copy = window.EKO_COPY;
+  const business = window.FIRM_CONFIG;
   const languages = ['sv', 'en'];
   const basePath = document.querySelector('meta[name="site-base"]').content;
   const origin = new URL(basePath, location.origin).href.replace(/\/$/, '');
   const icons = ['book', 'file', 'chart', 'advice'];
-  const titles = {sv:'Redovisning & skatterådgivning i Vårby',en:'Accounting & tax services in Vårby'};
-  const timeSlots = ['09:00','09:30','10:00','10:30','11:00','11:30','13:00','13:30','14:00','14:30','15:00','15:30','16:00','16:30','17:00','17:30','18:00','18:30','19:00','19:30'];
+  const titles = {sv:'Redovisning & ekonomisk rådgivning',en:'Accounting & financial advice'};
+  const timeSlots = business.timeSlots;
+  const bookingAvailable = business.demo || Boolean(business.email);
   const pathLanguage = location.pathname.slice(basePath.length).split('/').filter(Boolean)[0];
   let language = languages.includes(pathLanguage) ? pathLanguage : 'sv';
   const dialog = document.getElementById('booking-dialog');
@@ -18,6 +20,13 @@
   const get = (object, path) => path.split('.').reduce((value, key) => value?.[key], object);
   const escape = value => String(value).replace(/[&<>"']/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
   const icon = (name, className = 'icon') => `<svg class="${className}" aria-hidden="true"><use href="#${name}"/></svg>`;
+  const companyName = () => business.name[language] || business.legalName;
+  const translate = value => {
+    if (typeof value === 'string') return value.replaceAll('{{company}}', companyName());
+    if (Array.isArray(value)) return value.map(translate);
+    if (value && typeof value === 'object') return Object.fromEntries(Object.entries(value).map(([key, item]) => [key, translate(item)]));
+    return value;
+  };
   const dateString = date => `${date.getFullYear()}-${String(date.getMonth()+1).padStart(2,'0')}-${String(date.getDate()).padStart(2,'0')}`;
   const tomorrow = new Date();
   tomorrow.setDate(tomorrow.getDate() + 1);
@@ -26,7 +35,7 @@
   function validateDate() {
     const value = form.elements.date.value;
     const date = value ? new Date(`${value}T12:00:00`) : null;
-    const invalid = date && (value < dateString(tomorrow) || [0,6].includes(date.getDay()));
+    const invalid = date && (value < dateString(tomorrow) || !business.appointmentDays.includes(date.getDay()));
     form.elements.date.setCustomValidity(invalid ? copy[language].booking.dateError : '');
   }
 
@@ -37,8 +46,7 @@
   }
 
   function render() {
-    const text = copy[language];
-    const business = copy.common;
+    const text = translate(copy[language]);
     const emailLink = document.querySelector('.contact-email');
     emailLink.hidden = !business.email;
     emailLink.querySelector('span').textContent = business.email;
@@ -55,7 +63,54 @@
       const value = get(text, element.dataset.t);
       if (typeof value === 'string') element.textContent = value;
     });
-    document.title = `${titles[language]} | ${copy.common.businessName}`;
+    document.querySelectorAll('[data-company]').forEach(element => element.textContent = companyName());
+    document.querySelectorAll('.logo').forEach(element => element.setAttribute('aria-label', companyName()));
+    document.querySelectorAll('[data-brand-image]').forEach(image => {
+      const src = business.logo ? new URL(business.logo, origin + '/').href : new URL('assets/brand-mark.svg?v=generic-1', origin + '/').href;
+      if (image.src !== src) image.src = src;
+      image.alt = business.logo ? companyName() : '';
+      image.parentElement.classList.toggle('custom-logo', Boolean(business.logo));
+    });
+    const address = [business.address.street, [business.address.postalCode, business.address.locality].filter(Boolean).join(' '), business.address.countryCode].filter(Boolean).join('\n');
+    const addressElement = document.querySelector('.contact-address');
+    addressElement.textContent = address || text.contact.addressPlaceholder;
+    addressElement.classList.toggle('contact-placeholder', !address);
+    const org = document.querySelector('.contact-org');
+    org.hidden = !business.organisationNumber;
+    org.textContent = 'Org.nr ' + business.organisationNumber;
+    document.querySelector('.office-details').hidden = !business.demo && !address && !business.organisationNumber;
+    const hours = business.hours[language];
+    document.querySelector('.contact-hours').textContent = hours || text.contact.hoursPlaceholder;
+    document.querySelector('.contact-hours').classList.toggle('contact-placeholder', !hours);
+    document.querySelector('.hours-details').hidden = !business.demo && !hours;
+    document.querySelector('.contact-empty').hidden = !business.demo;
+    document.querySelector('.footer-location').textContent = business.address.locality;
+    const mapQuery = business.mapQuery || address.replaceAll('\n', ', ');
+    const mapLink = document.querySelector('.map-link');
+    mapLink.hidden = !mapQuery;
+    if (mapQuery) mapLink.href = 'https://www.google.com/maps?q=' + encodeURIComponent(mapQuery);
+    else mapLink.removeAttribute('href');
+    const mapShell = document.querySelector('.map-shell');
+    mapShell.hidden = !business.demo && !mapQuery;
+    mapShell.querySelector('.map-placeholder').hidden = Boolean(mapQuery);
+    mapShell.querySelector('.map-location').textContent = business.address.locality || text.contact.addressPlaceholder;
+    let map = mapShell.querySelector('iframe');
+    if (mapQuery) {
+      if (!map) {
+        map = document.createElement('iframe');
+        map.loading = 'lazy';
+        map.referrerPolicy = 'no-referrer-when-downgrade';
+        map.allowFullscreen = true;
+        mapShell.prepend(map);
+      }
+      const mapSrc = 'https://www.google.com/maps?q=' + encodeURIComponent(mapQuery) + '&output=embed';
+      if (map.src !== mapSrc) map.src = mapSrc;
+      map.title = companyName() + ' — ' + mapQuery;
+    } else map?.remove();
+    document.querySelector('.form-note').textContent = business.demo ? text.booking.demoNote : text.booking.liveNote;
+    form.querySelector('[type="submit"] span').textContent = business.demo ? text.booking.submit : text.booking.liveSubmit;
+    document.querySelector('.contact-book span').textContent = business.demo ? text.contact.cta : text.navigation.book;
+    document.title = `${titles[language]} | ${companyName()}`;
     document.querySelector('meta[name="description"]').content = text.hero.subtitle;
     document.querySelector('link[rel="canonical"]').href = `${origin}${language === 'sv' ? '/' : `/${language}/`}`;
     document.querySelector('meta[property="og:title"]').content = document.title;
@@ -104,19 +159,20 @@
       schema.type = 'application/ld+json';
       document.head.append(schema);
     }
-    schema.textContent = JSON.stringify({'@context':'https://schema.org','@type':'AccountingService',name:business.businessName,url:origin,identifier:{'@type':'PropertyValue',propertyID:'Org.nr',value:business.organisationNumber},address:{'@type':'PostalAddress',streetAddress:business.address.street,postalCode:business.address.postalCode,addressLocality:business.address.locality,addressRegion:business.address.region,addressCountry:business.address.countryCode},...(business.email ? {email:business.email} : {}),...(business.phoneUri ? {telephone:business.phoneUri.slice(4)} : {})});
+    const structuredAddress = Object.fromEntries(Object.entries({streetAddress:business.address.street,postalCode:business.address.postalCode,addressLocality:business.address.locality,addressRegion:business.address.region,addressCountry:business.address.countryCode}).filter(([,value]) => value));
+    schema.textContent = JSON.stringify({'@context':'https://schema.org','@type':business.demo ? 'WebSite' : 'AccountingService',name:business.legalName || companyName(),url:origin + '/',...(!business.demo ? {...(business.organisationNumber ? {identifier:{'@type':'PropertyValue',propertyID:'Org.nr',value:business.organisationNumber}} : {}),...(Object.keys(structuredAddress).length ? {address:{'@type':'PostalAddress',...structuredAddress}} : {}),...(business.email ? {email:business.email} : {}),...(business.phone ? {telephone:business.phone} : {})} : {})});
     document.querySelectorAll('[data-book]').forEach(button => {
-      button.disabled = !business.email;
-      if (!business.email) button.title = text.booking.unavailable;
+      button.disabled = !bookingAvailable;
+      if (!bookingAvailable) button.title = text.booking.unavailable;
       else button.removeAttribute('title');
     });
-    form.querySelector('[type="submit"]').disabled = !business.email;
+    form.querySelector('[type="submit"]').disabled = !bookingAvailable;
     document.dispatchEvent(new Event('eko:render'));
   }
 
   document.addEventListener('click', event => {
     const trigger = event.target.closest('[data-book]');
-    if (trigger && copy.common.email) {
+    if (trigger && bookingAvailable) {
       setMenu(false);
       if (trigger.dataset.book) form.elements.service.value = trigger.dataset.book;
       feedback.hidden = true;
@@ -153,21 +209,34 @@
   form.elements.date.addEventListener('change', validateDate);
   form.addEventListener('submit', event => {
     event.preventDefault();
-    if (!copy.common.email) return;
+    if (!bookingAvailable) return;
     validateDate();
     if (!form.reportValidity()) return;
     const values = Object.fromEntries(new FormData(form));
-    const text = copy[language].booking;
+    const text = translate(copy[language].booking);
     const service = copy[language].services.cards.find(card => card.id === values.service)?.title || text.otherService;
     const body = [text.emailIntro,'',`${text.name}: ${values.name}`,`${text.email}: ${values.email}`,`${text.phone}: ${values.phone}`,`${text.company}: ${values.company || '—'}`,`${text.service}: ${service}`,`${text.date}: ${values.date}`,`${text.time}: ${values.time}`,`${text.message}: ${values.message || '—'}`].join('\n');
-    const mailto = `mailto:${encodeURIComponent(copy.common.email)}?subject=${encodeURIComponent(text.emailSubject)}&body=${encodeURIComponent(body)}`;
+    if (business.demo) {
+      feedback.replaceChildren();
+      const message = document.createElement('span');
+      message.textContent = text.previewConfirmation;
+      const heading = document.createElement('strong');
+      heading.textContent = text.previewTitle;
+      const preview = document.createElement('p');
+      preview.textContent = body;
+      feedback.append(message, heading, preview);
+      feedback.hidden = false;
+      feedback.scrollIntoView({behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block:'nearest'});
+      return;
+    }
+    const mailto = `mailto:${encodeURIComponent(business.email)}?subject=${encodeURIComponent(text.emailSubject)}&body=${encodeURIComponent(body)}`;
     location.href = mailto;
     feedback.replaceChildren();
     const message = document.createElement('span');
-    message.textContent = `${text.feedback} ${text.emailFallback} `;
+    message.textContent = `${text.liveFeedback} `;
     const email = document.createElement('a');
     email.href = mailto;
-    email.textContent = `${copy.common.email} ↗`;
+    email.textContent = `${business.email} ↗`;
     email.style.textDecoration = 'underline';
     feedback.append(message, email);
     feedback.hidden = false;

@@ -1,32 +1,4 @@
 window.EKO_COPY = {
-  "common": {
-    "businessName": "K.Y Redovisning & Ekonomi AB",
-    "defaultLanguage": "sv",
-    "source": "https://www.bolagsfakta.se/5593375149-K.Y_Redovisning_%26_Ekonomi_AB",
-    "evidenceScope": "The company identity and visiting address were provided by the user and cross-checked with public company listings. Contact details are intentionally blank. Individual service availability has not been independently verified.",
-    "address": {
-      "street": "Myrstuguvägen 145",
-      "postalCode": "143 32",
-      "locality": "Vårby",
-      "region": "Stockholm",
-      "countryCode": "SE",
-      "display": "Myrstuguvägen 145, 143 32 Vårby"
-    },
-    "email": "",
-    "phone": "",
-    "phoneUri": "",
-    "officeHours": {
-      "days": [],
-      "opens": "",
-      "closes": ""
-    },
-    "serviceArea": "",
-    "audience": [
-      "Businesses"
-    ],
-    "originalLanguageRoutes": {},
-    "organisationNumber": "559337-5149"
-  },
   "sv": {
     "languageName": "Svenska",
     "navigation": {
@@ -41,21 +13,21 @@ window.EKO_COPY = {
       "book": "Boka ett samtal"
     },
     "hero": {
-      "eyebrow": "REDOVISNING I VÅRBY",
+      "eyebrow": "REDOVISNING FÖR FÖRETAG",
       "title": "Din ekonomi.\nI god ordning.",
-      "description": "Bokföring, deklarationer och rådgivning för företag. Med bas i Vårby.",
+      "description": "Bokföring, deklarationer och rådgivning för företag. Stöd för vardagens ekonomi och besluten framåt.",
       "primaryCta": "Boka ett samtal",
       "secondaryCta": "Se våra tjänster",
-      "locationNote": "Vårby · Redovisning & ekonomi",
-      "subtitle": "Bokföring, deklarationer och rådgivning för företag. Med bas i Vårby.",
+      "locationNote": "Bokföring · Skatt · Rådgivning",
+      "subtitle": "Bokföring, deklarationer och rådgivning för företag. Stöd för vardagens ekonomi och besluten framåt.",
       "cta": "Boka ett samtal",
       "artNote": "Vi tar hand om siffrorna.",
       "strip": "Bokföring · Skatt · Rådgivning"
     },
     "intro": {
-      "eyebrow": "K.Y Redovisning & Ekonomi AB",
+      "eyebrow": "{{company}}",
       "title": "Mer utrymme för det du vill göra.",
-      "body": "Ekonomin behöver uppmärksamhet. Vi hjälper dig med den löpande administrationen, årets rapporter och frågorna däremellan. Välj det stöd du behöver, från bokföring till skatterådgivning.",
+      "body": "Ekonomin behöver uppmärksamhet. Vi hjälper dig med den löpande administrationen, årets rapporter och frågorna däremellan. Välj det stöd du behöver, från bokföring till rådgivning.",
       "cta": "Se våra tjänster"
     },
     "services": {
@@ -84,8 +56,8 @@ window.EKO_COPY = {
           "items": [
             "Moms- och inkomstdeklarationer",
             "Personalskatt och arbetsgivaravgifter",
-            "Rapportering till Skatteverket",
-            "K10"
+            "Skatterapportering",
+            "Underlag och avstämningar för skatt"
           ],
           "cta": "Prata med oss om deklarationer"
         },
@@ -118,9 +90,9 @@ window.EKO_COPY = {
       ]
     },
     "about": {
-      "eyebrow": "OM K.Y",
+      "eyebrow": "OM BYRÅN",
       "title": "Ett samtal är en bra början.",
-      "body": "K.Y Redovisning & Ekonomi AB erbjuder redovisning och ekonomisk rådgivning för företag med bas i Vårby. Vi hjälper till med ekonomiadministration, rapportering och frågor om verksamhetens ekonomi.",
+      "body": "{{company}} hjälper företag med bokföring, rapportering och ekonomisk rådgivning. Ett uppdrag börjar med att förstå verksamheten och vilket stöd som behövs — i vardagen, vid årets slut och inför nästa steg.",
       "benefits": [
         {
           "title": "Vardagen samlad",
@@ -140,17 +112,17 @@ window.EKO_COPY = {
         {
           "number": "01",
           "title": "Berätta vad du behöver",
-          "description": "Förbered en kort beskrivning av ditt företag och vilket ekonomiskt stöd du behöver."
+          "description": "Beskriv ditt företag och vilka delar av ekonomin du behöver hjälp med."
         },
         {
           "number": "02",
           "title": "Vi går igenom uppdraget",
-          "description": "Vi pratar om din situation och vilka tjänster som passar."
+          "description": "Gå igenom behov, underlag och vilka tjänster som passar verksamheten."
         },
         {
           "number": "03",
           "title": "Kom igång med rätt stöd",
-          "description": "Vi kommer överens om nästa steg för din redovisning eller rådgivning."
+          "description": "Kom överens om uppdragets omfattning och nästa steg för redovisning eller rådgivning."
         }
       ],
       "processEyebrow": "VI BÖRJAR TILLSAMMANS"
@@ -161,33 +133,40 @@ window.EKO_COPY = {
       "items": [
         {
           "question": "Vilka tjänster erbjuder ni?",
-          "answer": "Vi hjälper till med löpande bokföring, löner, fakturering, moms- och skattedeklarationer, bokslut, årsredovisningar samt ekonomisk rådgivning och skatterådgivning."
+          "answer": "Bokföring, löner, fakturering, deklarationer, bokslut, årsredovisningar och ekonomisk rådgivning. Uppdragets innehåll och omfattning bestäms utifrån företagets behov."
         },
         {
-          "question": "Vilka hjälper ni?",
-          "answer": "Vi hjälper företag med redovisning, ekonomiadministration och rådgivning. Vilket stöd som passar beror på verksamhetens behov."
+          "question": "Passar tjänsterna mitt företag?",
+          "answer": "Tjänsterna riktar sig till företag som behöver stöd med löpande redovisning, rapportering eller ekonomiska frågor. Utgångspunkten är verksamhetens behov och vilka delar du vill ha hjälp med."
         },
         {
           "question": "Hur kommer jag igång?",
-          "answer": "Börja med att beskriva ditt företags situation och vilka frågor du behöver hjälp med. Det ger en grund för att välja rätt redovisningstjänster eller rådgivning."
+          "answer": "Börja med att beskriva ditt företag och de frågor du behöver hjälp med. Ett första samtal kan sedan användas för att gå igenom tjänster, underlag och nästa steg."
         }
       ]
     },
     "contact": {
       "eyebrow": "KONTAKT",
       "title": "Låt oss prata\nom din ekonomi.",
-      "description": "K.Y Redovisning & Ekonomi AB finns på Myrstuguvägen 145 i Vårby. Redovisning och ekonomisk rådgivning för företag.",
-      "addressLabel": "Besök oss",
-      "emailLabel": "Mejla oss",
-      "phoneLabel": "Ring oss",
+      "description": "Berätta om ditt företag och vilket stöd du söker. Ett samtal kan vara början på nästa steg.",
+      "addressLabel": "Besöksadress",
+      "emailLabel": "E-post",
+      "phoneLabel": "Telefon",
       "hoursLabel": "Öppettider",
       "hours": "",
       "mapCta": "Visa på karta",
-      "bookingCta": "Skicka en bokningsförfrågan",
-      "subtitle": "K.Y Redovisning & Ekonomi AB finns på Myrstuguvägen 145 i Vårby. Redovisning och ekonomisk rådgivning för företag.",
-      "cta": "Skicka en bokningsförfrågan",
-      "office": "Besök oss",
-      "maps": "Visa på karta"
+      "bookingCta": "Visa bokningsformuläret",
+      "subtitle": "Berätta om ditt företag och vilket stöd du söker. Ett samtal kan vara början på nästa steg.",
+      "cta": "Visa bokningsformuläret",
+      "office": "Besöksadress",
+      "maps": "Visa på karta",
+      "addressPlaceholder": "Byråns besöksadress",
+      "officePlaceholder": "Byråns besöksadress",
+      "emailPlaceholder": "Byråns e-postadress",
+      "phonePlaceholder": "Byråns telefonnummer",
+      "hoursPlaceholder": "Byråns öppettider",
+      "emptyDetails": "Kontaktuppgifter fylls i av byrån.",
+      "mapPlaceholder": "Här visas kartan till din byrå."
     },
     "booking": {
       "title": "Boka ett samtal",
@@ -201,17 +180,17 @@ window.EKO_COPY = {
       "timeLabel": "Önskad tid",
       "messageLabel": "Meddelande (valfritt)",
       "messagePlaceholder": "Beskriv kort vilken hjälp du söker.",
-      "submitLabel": "Skapa bokningsförfrågan",
+      "submitLabel": "Förhandsgranska förfrågan",
       "closeLabel": "Stäng bokningsformuläret",
       "requiredLabel": "Obligatoriskt",
       "otherService": "Jag är osäker / något annat",
-      "handoffMessage": "Din e-postapp öppnas med en bokningsförfrågan. Skicka mejlet för att kontakta oss. Tid och upplägg behöver bekräftas med oss.",
-      "handoffSuccess": "Din förfrågan är förberedd. Skicka den i din e-postapp för att kontakta oss.",
-      "emailSubject": "Bokningsförfrågan — K.Y Redovisning & Ekonomi AB",
-      "emailIntro": "Hej K.Y! Jag vill gärna boka ett samtal.",
-      "emailFallback": "",
+      "handoffMessage": "Det här är en demo. Formuläret visar en lokal förhandsgranskning. Ingen förfrågan skickas och ingen tid bokas.",
+      "handoffSuccess": "Din förfrågan visas här som en lokal förhandsgranskning. Inget har skickats och ingen bokning har gjorts.",
+      "emailSubject": "Förfrågan — {{company}}",
+      "emailIntro": "Hej! Jag vill gärna boka ett samtal om mitt företags redovisning.",
+      "emailFallback": "Kontaktuppgifter saknas i den här demon.",
       "validationMessage": "Fyll i ditt namn, en giltig e-postadress och välj en tjänst.",
-      "eyebrow": "K.Y Redovisning & Ekonomi AB",
+      "eyebrow": "{{company}}",
       "subtitle": "Berätta kort vad du behöver hjälp med och föreslå en tid.",
       "name": "Namn",
       "email": "E-post",
@@ -221,17 +200,23 @@ window.EKO_COPY = {
       "time": "Önskad tid",
       "service": "Vad behöver du hjälp med?",
       "message": "Meddelande (valfritt)",
-      "handoffNote": "Din e-postapp öppnas med en bokningsförfrågan. Skicka mejlet för att kontakta oss. Tid och upplägg behöver bekräftas med oss.",
+      "handoffNote": "Det här är en demo. Formuläret visar en lokal förhandsgranskning. Ingen förfrågan skickas och ingen tid bokas.",
       "cancel": "Avbryt",
-      "submit": "Skapa bokningsförfrågan",
+      "submit": "Förhandsgranska förfrågan",
       "optional": "Valfritt",
-      "weekendError": "Välj ett framtida datum, måndag till fredag.",
-      "dateError": "Välj ett framtida datum, måndag till fredag.",
-      "feedback": "Din förfrågan är förberedd. Skicka den i din e-postapp för att kontakta oss.",
-      "unavailable": "Bokning är tillfälligt otillgänglig."
+      "weekendError": "Välj ett framtida datum på en tillgänglig mötesdag.",
+      "dateError": "Välj ett framtida datum på en tillgänglig mötesdag.",
+      "feedback": "Din förfrågan visas här som en lokal förhandsgranskning. Inget har skickats och ingen bokning har gjorts.",
+      "unavailable": "Bokning är tillfälligt otillgänglig.",
+      "liveNote": "Din e-postapp öppnas med en bokningsförfrågan. Skicka mejlet för att kontakta oss. Tid och upplägg behöver bekräftas med oss.",
+      "liveFeedback": "Din förfrågan är förberedd. Skicka den i din e-postapp för att kontakta oss.",
+      "liveSubmit": "Skapa bokningsförfrågan",
+      "demoNote": "Det här är en demo. Formuläret visar en lokal förhandsgranskning. Ingen förfrågan skickas och ingen tid bokas.",
+      "previewTitle": "Förhandsgranskning av din förfrågan",
+      "previewConfirmation": "Din förfrågan visas här som en lokal förhandsgranskning. Inget har skickats och ingen bokning har gjorts."
     },
     "footer": {
-      "description": "Redovisning och ekonomisk rådgivning för företag. Med bas i Vårby.",
+      "description": "Bokföring, rapportering och rådgivning för företag. {{company}}.",
       "rights": "Alla rättigheter förbehållna.",
       "backToTop": "Till toppen",
       "top": "Till toppen",
@@ -239,26 +224,27 @@ window.EKO_COPY = {
     },
     "a11y": {
       "skip": "Hoppa till innehåll",
-      "language": "Välj språk"
+      "language": "Välj språk",
+      "noScript": "Aktivera JavaScript för språkval och bokningsformuläret."
     },
     "collage": {
-      "sectionLabel": "K.Y I VARDAGEN",
+      "sectionLabel": "REDOVISNING I VARDAGEN",
       "sectionHeading": "Från dagens siffror till nästa steg.",
       "panels": [
         {
           "title": "Ordning i vardagen.",
           "subtitle": "Löpande bokföring",
-          "description": "Vi hjälper dig med bokföring, löner och fakturering — delarna som håller vardagens ekonomi samlad."
+          "description": "Stöd med bokföring, löner och fakturering — delarna som håller vardagens ekonomi samlad."
         },
         {
           "title": "Hela året, samlat.",
           "subtitle": "Bokslut & årsredovisning",
-          "description": "Från avstämningar till årsredovisning. Vi hjälper dig att sammanställa årets siffror och se hur delarna hänger ihop."
+          "description": "Från avstämningar till årsredovisning. Sammanställ årets siffror och se hur delarna hänger ihop."
         },
         {
           "title": "Ditt nästa steg.",
           "subtitle": "Rådgivning & skatt",
-          "description": "Ska du starta företag eller se över din ekonomi? Prata med oss om skatt, ekonomisk förvaltning och frågorna framåt."
+          "description": "Ska du starta företag eller se över ekonomin? Ta nästa steg med stöd i frågor om skatt, ekonomi och verksamhet."
         }
       ]
     },
@@ -266,6 +252,12 @@ window.EKO_COPY = {
       "label": "Förbereder din upplevelse",
       "ready": "Klart. Nu börjar vi.",
       "opening": "Öppnar webbplatsen"
+    },
+    "brand": {
+      "top": "EKONOMI. REDOVISNING. RÅDGIVNING.",
+      "bottom": "DIN VERKSAMHET ↗ VÅRT FOKUS",
+      "artTop": "REDOVISNING",
+      "artBottom": "FRAMÅT ↗"
     }
   },
   "en": {
@@ -282,21 +274,21 @@ window.EKO_COPY = {
       "book": "Book a conversation"
     },
     "hero": {
-      "eyebrow": "ACCOUNTING IN VÅRBY",
+      "eyebrow": "ACCOUNTING FOR BUSINESSES",
       "title": "Your finances.\nIn good order.",
-      "description": "Bookkeeping, tax returns and advice for businesses. Based in Vårby.",
+      "description": "Bookkeeping, tax returns and advice for businesses. Support for everyday finances and the decisions ahead.",
       "primaryCta": "Book a conversation",
       "secondaryCta": "Explore our services",
-      "locationNote": "Vårby · Accounting & finance",
-      "subtitle": "Bookkeeping, tax returns and advice for businesses. Based in Vårby.",
+      "locationNote": "Accounting · Tax · Advice",
+      "subtitle": "Bookkeeping, tax returns and advice for businesses. Support for everyday finances and the decisions ahead.",
       "cta": "Book a conversation",
       "artNote": "We look after the numbers.",
       "strip": "Accounting · Tax · Advice"
     },
     "intro": {
-      "eyebrow": "K.Y Redovisning & Ekonomi AB",
+      "eyebrow": "{{company}}",
       "title": "More room for what you want to do.",
-      "body": "Your finances need attention. We help with day-to-day administration, annual reporting and the questions in between. Choose the support you need, from bookkeeping to tax advice.",
+      "body": "Your finances need attention. We help with day-to-day administration, annual reporting and the questions in between. Choose the support you need, from bookkeeping to advice.",
       "cta": "Explore our services"
     },
     "services": {
@@ -325,8 +317,8 @@ window.EKO_COPY = {
           "items": [
             "VAT and income tax returns",
             "Employee withholding tax and employer contributions",
-            "Reporting to the Swedish Tax Agency",
-            "K10"
+            "Tax reporting",
+            "Tax records and reconciliation"
           ],
           "cta": "Talk to us about tax returns"
         },
@@ -359,9 +351,9 @@ window.EKO_COPY = {
       ]
     },
     "about": {
-      "eyebrow": "ABOUT K.Y",
+      "eyebrow": "ABOUT THE FIRM",
       "title": "A conversation is a good place to start.",
-      "body": "K.Y Redovisning & Ekonomi AB offers accounting and financial advice for businesses, based in Vårby. We help with financial administration, reporting and questions about your company's finances.",
+      "body": "{{company}} helps businesses with bookkeeping, reporting and financial advice. Every engagement starts with understanding the business and the support it needs — day to day, at year-end and for the next step.",
       "benefits": [
         {
           "title": "Everyday tasks together",
@@ -381,17 +373,17 @@ window.EKO_COPY = {
         {
           "number": "01",
           "title": "Tell us what you need",
-          "description": "Prepare a short description of your business and the financial support you need."
+          "description": "Describe your business and the parts of your finances you need help with."
         },
         {
           "number": "02",
           "title": "Discuss the work",
-          "description": "We talk through your situation and the services that fit."
+          "description": "Review your needs, records and the services that suit your business."
         },
         {
           "number": "03",
           "title": "Start with the right support",
-          "description": "Together, we agree on the next step for your accounting or advice."
+          "description": "Agree on the scope of work and the next step for your accounting or advice."
         }
       ],
       "processEyebrow": "LET'S START TOGETHER"
@@ -402,33 +394,40 @@ window.EKO_COPY = {
       "items": [
         {
           "question": "Which services do you offer?",
-          "answer": "We help with ongoing bookkeeping, payroll, invoicing, VAT and tax returns, year-end accounts, annual reports, financial advice and tax consulting."
+          "answer": "Bookkeeping, payroll, invoicing, tax returns, year-end accounts, annual reports and financial advice. The scope of work is agreed according to your business's needs."
         },
         {
-          "question": "Who do you work with?",
-          "answer": "We help businesses with accounting, financial administration and advice. The right support depends on your company's needs."
+          "question": "Are the services right for my business?",
+          "answer": "The services are for businesses looking for support with ongoing accounting, reporting or financial questions. The starting point is what your business needs and where you would like help."
         },
         {
           "question": "How do I get started?",
-          "answer": "Start by describing your company's situation and the questions you need help with. This provides a basis for choosing suitable accounting services or advice."
+          "answer": "Start by describing your business and the questions you need help with. An initial conversation can then cover suitable services, records and the next step."
         }
       ]
     },
     "contact": {
       "eyebrow": "CONTACT",
       "title": "Let's talk\nabout your finances.",
-      "description": "K.Y Redovisning & Ekonomi AB is located at Myrstuguvägen 145 in Vårby. Accounting and financial advice for businesses.",
-      "addressLabel": "Visit us",
-      "emailLabel": "Email us",
-      "phoneLabel": "Call us",
+      "description": "Tell us about your business and the support you need. A conversation can be the start of your next step.",
+      "addressLabel": "Office address",
+      "emailLabel": "Email",
+      "phoneLabel": "Phone",
       "hoursLabel": "Office hours",
       "hours": "",
       "mapCta": "View on map",
-      "bookingCta": "Send an appointment request",
-      "subtitle": "K.Y Redovisning & Ekonomi AB is located at Myrstuguvägen 145 in Vårby. Accounting and financial advice for businesses.",
-      "cta": "Send an appointment request",
-      "office": "Visit us",
-      "maps": "View on map"
+      "bookingCta": "View the appointment form",
+      "subtitle": "Tell us about your business and the support you need. A conversation can be the start of your next step.",
+      "cta": "View the appointment form",
+      "office": "Office address",
+      "maps": "View on map",
+      "addressPlaceholder": "The firm's office address",
+      "officePlaceholder": "The firm's office address",
+      "emailPlaceholder": "The firm's email address",
+      "phonePlaceholder": "The firm's phone number",
+      "hoursPlaceholder": "The firm's office hours",
+      "emptyDetails": "Contact details are provided by the firm.",
+      "mapPlaceholder": "Your office map goes here."
     },
     "booking": {
       "title": "Book a conversation",
@@ -442,17 +441,17 @@ window.EKO_COPY = {
       "timeLabel": "Preferred time",
       "messageLabel": "Message (optional)",
       "messagePlaceholder": "Briefly describe the help you need.",
-      "submitLabel": "Prepare appointment request",
+      "submitLabel": "Preview enquiry",
       "closeLabel": "Close appointment form",
       "requiredLabel": "Required",
       "otherService": "I'm unsure / something else",
-      "handoffMessage": "Your email app will open with an appointment request. Send the email to contact us. The time and arrangements need to be confirmed with us.",
-      "handoffSuccess": "Your request is prepared. Send it in your email app to contact us.",
-      "emailSubject": "Appointment request — K.Y Redovisning & Ekonomi AB",
-      "emailIntro": "Hello K.Y! I would like to arrange a conversation.",
-      "emailFallback": "",
+      "handoffMessage": "This is a demo. The form creates a local preview. No enquiry is sent and no appointment is booked.",
+      "handoffSuccess": "Your enquiry is shown here as a local preview. Nothing has been sent and no appointment has been booked.",
+      "emailSubject": "Enquiry — {{company}}",
+      "emailIntro": "Hello! I would like to arrange a conversation about my business's accounting.",
+      "emailFallback": "Contact details are not available in this demo.",
       "validationMessage": "Enter your name, a valid email address and choose a service.",
-      "eyebrow": "K.Y Redovisning & Ekonomi AB",
+      "eyebrow": "{{company}}",
       "subtitle": "Tell us briefly what you need help with and suggest a time.",
       "name": "Name",
       "email": "Email",
@@ -462,17 +461,23 @@ window.EKO_COPY = {
       "time": "Preferred time",
       "service": "What do you need help with?",
       "message": "Message (optional)",
-      "handoffNote": "Your email app will open with an appointment request. Send the email to contact us. The time and arrangements need to be confirmed with us.",
+      "handoffNote": "This is a demo. The form creates a local preview. No enquiry is sent and no appointment is booked.",
       "cancel": "Cancel",
-      "submit": "Prepare appointment request",
+      "submit": "Preview enquiry",
       "optional": "Optional",
-      "weekendError": "Choose a future date, Monday to Friday.",
-      "dateError": "Choose a future date, Monday to Friday.",
-      "feedback": "Your request is prepared. Send it in your email app to contact us.",
-      "unavailable": "Booking is temporarily unavailable."
+      "weekendError": "Choose a future date on an available appointment day.",
+      "dateError": "Choose a future date on an available appointment day.",
+      "feedback": "Your enquiry is shown here as a local preview. Nothing has been sent and no appointment has been booked.",
+      "unavailable": "Appointment requests are currently unavailable.",
+      "liveNote": "Your email app will open with an appointment request. Send the email to contact us. The time and arrangements need to be confirmed with us.",
+      "liveFeedback": "Your request is prepared. Send it in your email app to contact us.",
+      "liveSubmit": "Prepare appointment request",
+      "demoNote": "This is a demo. The form creates a local preview. No enquiry is sent and no appointment is booked.",
+      "previewTitle": "Your enquiry preview",
+      "previewConfirmation": "Your enquiry is shown here as a local preview. Nothing has been sent and no appointment has been booked."
     },
     "footer": {
-      "description": "Accounting and financial advice for businesses. Based in Vårby.",
+      "description": "Bookkeeping, reporting and advice for businesses. {{company}}.",
       "rights": "All rights reserved.",
       "backToTop": "Back to top",
       "top": "Back to top",
@@ -480,26 +485,27 @@ window.EKO_COPY = {
     },
     "a11y": {
       "skip": "Skip to content",
-      "language": "Choose language"
+      "language": "Choose language",
+      "noScript": "Enable JavaScript to use language selection and the appointment form."
     },
     "collage": {
-      "sectionLabel": "EVERYDAY K.Y",
+      "sectionLabel": "EVERYDAY ACCOUNTING",
       "sectionHeading": "From today's numbers to your next step.",
       "panels": [
         {
           "title": "Everyday finances, in order.",
           "subtitle": "Ongoing bookkeeping",
-          "description": "Help with bookkeeping, payroll and invoicing — bringing the everyday parts of your finances together."
+          "description": "Support with bookkeeping, payroll and invoicing — bringing the everyday parts of your finances together."
         },
         {
           "title": "The year, brought together.",
           "subtitle": "Year-end accounts & annual reports",
-          "description": "From reconciliation to annual reports. We help bring together the year's figures and put your finances in context."
+          "description": "From reconciliation to annual reports. Bring together the year's figures and see how the parts connect."
         },
         {
           "title": "Your next step.",
           "subtitle": "Financial & tax advice",
-          "description": "Starting a company or reviewing your finances? Talk to us about tax, financial management and the decisions ahead."
+          "description": "Starting a company or reviewing your finances? Take the next step with support on tax, finances and your business."
         }
       ]
     },
@@ -507,6 +513,12 @@ window.EKO_COPY = {
       "label": "Preparing your experience",
       "ready": "Ready. Let's begin.",
       "opening": "Opening the website"
+    },
+    "brand": {
+      "top": "ACCOUNTING. REPORTING. ADVICE.",
+      "bottom": "YOUR BUSINESS ↗ OUR FOCUS",
+      "artTop": "ACCOUNTING",
+      "artBottom": "FORWARD ↗"
     }
   }
 };

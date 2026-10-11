@@ -2,9 +2,11 @@
 
 A responsive, four-language accounting website with a Visify-inspired visual direction and original K.Y content.
 
-Public website: https://ioannisbekas.github.io/eko-ratt/
+Public website: https://ioannisbekas.github.io/ky-redovisning/
 
-GitHub Pages serves `docs` from the `main` branch. The site uses plain HTML, CSS and JavaScript; no dependencies or bundler are needed. Swedish is the default; English, Greek and Albanian are available at `/eko-ratt/en/`, `/eko-ratt/el/` and `/eko-ratt/sq/`.
+Repository: https://github.com/IoannisBekas/ky-redovisning
+
+GitHub Pages serves `docs` from the `main` branch. The site uses plain HTML, CSS and JavaScript; no dependencies or bundler are needed. Swedish is the default; English, Greek and Albanian are available at `/ky-redovisning/en/`, `/ky-redovisning/el/` and `/ky-redovisning/sq/`.
 
 Edit `index.template.html`, `docs/assets/styles.css`, `docs/assets/app.js` and the text in `docs/assets/copy.js`. Run `node prepare-site.mjs` to update the localized HTML pages and metadata before committing changes. Node.js 22 or newer is recommended for this preparation script.
 

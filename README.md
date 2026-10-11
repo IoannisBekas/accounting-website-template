@@ -6,6 +6,10 @@ Public website: https://ioannisbekas.github.io/ky-redovisning/
 
 Repository: https://github.com/IoannisBekas/ky-redovisning
 
+Publish updates to this GitHub repository only. Do not save or deploy development to ChatGPT Sites.
+
+The green palette uses forest green `#165343`, light green `#b4e080`, green ink `#183429` and off-white `#f4f7f1`.
+
 GitHub Pages serves `docs` from the `main` branch. The site uses plain HTML, CSS and JavaScript; no dependencies or bundler are needed. Swedish is the default; English, Greek and Albanian are available at `/ky-redovisning/en/`, `/ky-redovisning/el/` and `/ky-redovisning/sq/`.
 
 Edit `index.template.html`, `docs/assets/styles.css`, `docs/assets/app.js` and the text in `docs/assets/copy.js`. Run `node prepare-site.mjs` to update the localized HTML pages and metadata before committing changes. Node.js 22 or newer is recommended for this preparation script.

@@ -3,7 +3,7 @@
 .motion-toggle{display:inline-flex;align-items:center;gap:9px;background:transparent;color:#fff;font-size:11px;letter-spacing:0;line-height:1.4;padding:12px 0;min-height:44px}
 .motion-toggle-icon{width:12px;height:13px;border-left:3px solid currentColor;border-right:3px solid currentColor}
 .motion-toggle[aria-pressed=true] .motion-toggle-icon{height:0;width:0;border:6px solid transparent;border-left:10px solid currentColor;border-right:0}
-.motion-toggle:hover{color:var(--lime)}
+.motion-toggle:hover{color:var(--accent)}
 .motion-word{display:inline-block}
 .hero-art{transform:translate3d(var(--pointer-x,0px),calc(var(--pointer-y,0px) + var(--scroll-y,0px)),0);transition:transform .4s cubic-bezier(.22,.61,.36,1)}
 .clarity-art{display:block;overflow:visible}
@@ -22,7 +22,7 @@
 .motion-scene *{animation-play-state:paused!important}
 .motion-ready .motion-scene.is-active *{animation-play-state:running!important}
 .motion-ready.motion-paused .motion-scene *,.motion-ready.motion-hidden .motion-scene *{animation-play-state:paused!important}
-.brand-doodles{position:absolute!important;inset:0;width:100%!important;height:100%;pointer-events:none;stroke:var(--lime);stroke-width:3;stroke-linecap:round}
+.brand-doodles{position:absolute!important;inset:0;width:100%!important;height:100%;pointer-events:none;stroke:var(--accent);stroke-width:3;stroke-linecap:round}
 .brand-loop,.brand-drawn-arrow{stroke-dasharray:1}
 .motion-ready .brand-loop{animation:ink-draw 4s ease-in-out infinite}
 .motion-ready .brand-drawn-arrow{animation:ink-draw 4s ease-in-out -.7s infinite}
@@ -31,8 +31,8 @@
 .motion-ready .scroll-link span{display:block;animation:scroll-nudge 2.8s ease-in-out 2}
 .button .icon{transition:transform .22s ease}
 .button:hover .icon{transform:translate(3px,-3px)}
-.service-card:focus-within{box-shadow:8px 8px 0 var(--lime)}
-@media(hover:hover) and (pointer:fine){.button:hover{box-shadow:8px 8px 0 var(--lime);transform:translate(-4px,-4px)}.button-lime:hover{box-shadow:8px 8px 0 white}.service-card:hover{box-shadow:12px 12px 0 var(--lime);transform:translate(-6px,-6px)}.service-card:hover .service-icon{transform:rotate(-8deg)}.service-icon{transition:transform .25s}}
+.service-card:focus-within{box-shadow:8px 8px 0 var(--accent)}
+@media(hover:hover) and (pointer:fine){.button:hover{box-shadow:8px 8px 0 var(--accent);transform:translate(-4px,-4px)}.button-lime:hover{box-shadow:8px 8px 0 white}.service-card:hover{box-shadow:12px 12px 0 var(--accent);transform:translate(-6px,-6px)}.service-card:hover .service-icon{transform:rotate(-8deg)}.service-icon{transition:transform .25s}}
 dialog[open]{animation:dialog-enter .25s cubic-bezier(.22,.61,.36,1)}
 @keyframes paper-float{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
 @keyframes calculator-rock{0%,100%{transform:rotate(-3deg) translateY(0)}50%{transform:rotate(3deg) translateY(-6px)}}

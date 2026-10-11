@@ -5,7 +5,7 @@
   const basePath = document.querySelector('meta[name="site-base"]').content;
   const origin = new URL(basePath, location.origin).href.replace(/\/$/, '');
   const icons = ['book', 'file', 'chart', 'advice'];
-  const titles = {sv:'Redovisning & skatterådgivning i Stockholm',en:'Accounting & tax services in Stockholm',el:'Λογιστικές υπηρεσίες στη Στοκχόλμη',sq:'Kontabilitet dhe këshillim tatimor në Stokholm'};
+  const titles = {sv:'Redovisning & skatterådgivning i Vårby',en:'Accounting & tax services in Vårby',el:'Λογιστικές υπηρεσίες στο Vårby',sq:'Kontabilitet dhe këshillim tatimor në Vårby'};
   const timeSlots = ['09:00','09:30','10:00','10:30','11:00','11:30','13:00','13:30','14:00','14:30','15:00','15:30','16:00','16:30','17:00','17:30','18:00','18:30','19:00','19:30'];
   const pathLanguage = location.pathname.slice(basePath.length).split('/').filter(Boolean)[0];
   let language = languages.includes(pathLanguage) ? pathLanguage : 'sv';
@@ -38,13 +38,24 @@
 
   function render() {
     const text = copy[language];
+    const business = copy.common;
+    const emailLink = document.querySelector('.contact-email');
+    emailLink.hidden = !business.email;
+    emailLink.querySelector('span').textContent = business.email;
+    if (business.email) emailLink.href = 'mailto:' + business.email;
+    else emailLink.removeAttribute('href');
+    const phoneLink = document.querySelector('.contact-phone');
+    phoneLink.hidden = !business.phone;
+    phoneLink.textContent = business.phone;
+    if (business.phoneUri) phoneLink.href = business.phoneUri;
+    else phoneLink.removeAttribute('href');
     document.documentElement.lang = language;
     languageSelect.value = language;
     document.querySelectorAll('[data-t]').forEach(element => {
       const value = get(text, element.dataset.t);
       if (typeof value === 'string') element.textContent = value;
     });
-    document.title = `${titles[language]} | Eko-Rätt AB`;
+    document.title = `${titles[language]} | ${copy.common.businessName}`;
     document.querySelector('meta[name="description"]').content = text.hero.subtitle;
     document.querySelector('link[rel="canonical"]').href = `${origin}${language === 'sv' ? '/' : `/${language}/`}`;
     document.querySelector('meta[property="og:title"]').content = document.title;
@@ -93,13 +104,19 @@
       schema.type = 'application/ld+json';
       document.head.append(schema);
     }
-    schema.textContent = JSON.stringify({'@context':'https://schema.org','@type':'AccountingService',name:'Eko-Rätt AB',url:origin,email:'Ekorett@gmail.com',telephone:'+46720258543',address:{'@type':'PostalAddress',streetAddress:'Bjursätragatan 105',postalCode:'124 63',addressLocality:'Bandhagen',addressRegion:'Stockholm',addressCountry:'SE'},areaServed:'Sweden',openingHours:['Mo-Fr 09:00-20:00']});
+    schema.textContent = JSON.stringify({'@context':'https://schema.org','@type':'AccountingService',name:business.businessName,url:origin,identifier:{'@type':'PropertyValue',propertyID:'Org.nr',value:business.organisationNumber},address:{'@type':'PostalAddress',streetAddress:business.address.street,postalCode:business.address.postalCode,addressLocality:business.address.locality,addressRegion:business.address.region,addressCountry:business.address.countryCode},...(business.email ? {email:business.email} : {}),...(business.phoneUri ? {telephone:business.phoneUri.slice(4)} : {})});
+    document.querySelectorAll('[data-book]').forEach(button => {
+      button.disabled = !business.email;
+      if (!business.email) button.title = text.booking.unavailable;
+      else button.removeAttribute('title');
+    });
+    form.querySelector('[type="submit"]').disabled = !business.email;
     document.dispatchEvent(new Event('eko:render'));
   }
 
   document.addEventListener('click', event => {
     const trigger = event.target.closest('[data-book]');
-    if (trigger) {
+    if (trigger && copy.common.email) {
       setMenu(false);
       if (trigger.dataset.book) form.elements.service.value = trigger.dataset.book;
       feedback.hidden = true;
@@ -136,20 +153,21 @@
   form.elements.date.addEventListener('change', validateDate);
   form.addEventListener('submit', event => {
     event.preventDefault();
+    if (!copy.common.email) return;
     validateDate();
     if (!form.reportValidity()) return;
     const values = Object.fromEntries(new FormData(form));
     const text = copy[language].booking;
     const service = copy[language].services.cards.find(card => card.id === values.service)?.title || text.otherService;
     const body = [text.emailIntro,'',`${text.name}: ${values.name}`,`${text.email}: ${values.email}`,`${text.phone}: ${values.phone}`,`${text.company}: ${values.company || '—'}`,`${text.service}: ${service}`,`${text.date}: ${values.date}`,`${text.time}: ${values.time}`,`${text.message}: ${values.message || '—'}`].join('\n');
-    const mailto = `mailto:Ekorett@gmail.com?subject=${encodeURIComponent(text.emailSubject)}&body=${encodeURIComponent(body)}`;
+    const mailto = `mailto:${encodeURIComponent(copy.common.email)}?subject=${encodeURIComponent(text.emailSubject)}&body=${encodeURIComponent(body)}`;
     location.href = mailto;
     feedback.replaceChildren();
     const message = document.createElement('span');
     message.textContent = `${text.feedback} ${text.emailFallback} `;
     const email = document.createElement('a');
     email.href = mailto;
-    email.textContent = 'Ekorett@gmail.com ↗';
+    email.textContent = `${copy.common.email} ↗`;
     email.style.textDecoration = 'underline';
     feedback.append(message, email);
     feedback.hidden = false;

@@ -1,42 +1,31 @@
 window.EKO_COPY = {
   "common": {
-    "businessName": "Eko-Rätt AB",
+    "businessName": "K.Y Redovisning & Ekonomi AB",
     "defaultLanguage": "sv",
-    "source": "https://xn--eko-rtt-9wa.se/",
-    "evidenceScope": "Business information and available services are based on the company's public website. These details have not been independently checked against a business registry.",
+    "source": "https://www.bolagsfakta.se/5593375149-K.Y_Redovisning_%26_Ekonomi_AB",
+    "evidenceScope": "The company identity and visiting address were provided by the user and cross-checked with public company listings. Contact details are intentionally blank. Individual service availability has not been independently verified.",
     "address": {
-      "street": "Bjursätragatan 105",
-      "postalCode": "124 63",
-      "locality": "Bandhagen",
+      "street": "Myrstuguvägen 145",
+      "postalCode": "143 32",
+      "locality": "Vårby",
       "region": "Stockholm",
       "countryCode": "SE",
-      "display": "Bjursätragatan 105, 124 63 Bandhagen, Stockholm"
+      "display": "Myrstuguvägen 145, 143 32 Vårby"
     },
-    "email": "Ekorett@gmail.com",
-    "phone": "+46 72 025 85 43",
-    "phoneUri": "tel:+46720258543",
+    "email": "",
+    "phone": "",
+    "phoneUri": "",
     "officeHours": {
-      "days": [
-        "Monday",
-        "Tuesday",
-        "Wednesday",
-        "Thursday",
-        "Friday"
-      ],
-      "opens": "09:00",
-      "closes": "20:00"
+      "days": [],
+      "opens": "",
+      "closes": ""
     },
-    "serviceArea": "Sweden",
+    "serviceArea": "",
     "audience": [
-      "Businesses",
-      "Individuals"
+      "Businesses"
     ],
-    "originalLanguageRoutes": {
-      "sv": "https://xn--eko-rtt-9wa.se/sv/",
-      "en": "https://xn--eko-rtt-9wa.se/",
-      "el": "https://xn--eko-rtt-9wa.se/el/",
-      "sq": "https://xn--eko-rtt-9wa.se/sq/"
-    }
+    "originalLanguageRoutes": {},
+    "organisationNumber": "559337-5149"
   },
   "sv": {
     "languageName": "Svenska",
@@ -52,19 +41,19 @@ window.EKO_COPY = {
       "book": "Boka ett samtal"
     },
     "hero": {
-      "eyebrow": "REDOVISNING I STOCKHOLM",
+      "eyebrow": "REDOVISNING I VÅRBY",
       "title": "Din ekonomi.\nI god ordning.",
-      "description": "Bokföring, deklarationer och rådgivning för företag och privatpersoner. Från Stockholm, för hela Sverige.",
+      "description": "Bokföring, deklarationer och rådgivning för företag. Med bas i Vårby.",
       "primaryCta": "Boka ett samtal",
       "secondaryCta": "Se våra tjänster",
-      "locationNote": "Stockholm · Hela Sverige",
-      "subtitle": "Bokföring, deklarationer och rådgivning för företag och privatpersoner. Från Stockholm, för hela Sverige.",
+      "locationNote": "Vårby · Redovisning & ekonomi",
+      "subtitle": "Bokföring, deklarationer och rådgivning för företag. Med bas i Vårby.",
       "cta": "Boka ett samtal",
       "artNote": "Vi tar hand om siffrorna.",
       "strip": "Bokföring · Skatt · Rådgivning"
     },
     "intro": {
-      "eyebrow": "EKO-RÄTT AB",
+      "eyebrow": "K.Y Redovisning & Ekonomi AB",
       "title": "Mer utrymme för det du vill göra.",
       "body": "Ekonomin behöver uppmärksamhet. Vi hjälper dig med den löpande administrationen, årets rapporter och frågorna däremellan. Välj det stöd du behöver, från bokföring till skatterådgivning.",
       "cta": "Se våra tjänster"
@@ -91,7 +80,7 @@ window.EKO_COPY = {
           "id": "tax",
           "eyebrow": "02",
           "title": "Deklarationer",
-          "description": "Stöd med deklarationer och rapportering för både företag och privatpersoner.",
+          "description": "Stöd med deklarationer och rapportering för företag.",
           "items": [
             "Moms- och inkomstdeklarationer",
             "Personalskatt och arbetsgivaravgifter",
@@ -129,9 +118,9 @@ window.EKO_COPY = {
       ]
     },
     "about": {
-      "eyebrow": "OM EKO-RÄTT",
+      "eyebrow": "OM K.Y",
       "title": "Ett samtal är en bra början.",
-      "body": "Eko-Rätt AB erbjuder redovisning och skatterådgivning från Bandhagen i Stockholm. Vi hjälper företag med ekonomiadministration och rapportering, och privatpersoner med deklarationer och ekonomisk vägledning.",
+      "body": "K.Y Redovisning & Ekonomi AB erbjuder redovisning och ekonomisk rådgivning för företag med bas i Vårby. Vi hjälper till med ekonomiadministration, rapportering och frågor om verksamhetens ekonomi.",
       "benefits": [
         {
           "title": "Vardagen samlad",
@@ -151,7 +140,7 @@ window.EKO_COPY = {
         {
           "number": "01",
           "title": "Berätta vad du behöver",
-          "description": "Kontakta oss via telefon, mejl eller en bokningsförfrågan."
+          "description": "Förbered en kort beskrivning av ditt företag och vilket ekonomiskt stöd du behöver."
         },
         {
           "number": "02",
@@ -175,27 +164,27 @@ window.EKO_COPY = {
           "answer": "Vi hjälper till med löpande bokföring, löner, fakturering, moms- och skattedeklarationer, bokslut, årsredovisningar samt ekonomisk rådgivning och skatterådgivning."
         },
         {
-          "question": "Arbetar ni med både företag och privatpersoner?",
-          "answer": "Ja. Vi hjälper företag med ekonomiadministration och rapportering, och privatpersoner med deklarationer och ekonomisk vägledning. Vi finns i Stockholm och erbjuder tjänster i hela Sverige."
+          "question": "Vilka hjälper ni?",
+          "answer": "Vi hjälper företag med redovisning, ekonomiadministration och rådgivning. Vilket stöd som passar beror på verksamhetens behov."
         },
         {
           "question": "Hur kommer jag igång?",
-          "answer": "Ring, mejla eller skicka en bokningsförfrågan. Vi börjar med att gå igenom dina behov och vilken hjälp som passar. En förfrågan är inte en bekräftad bokning."
+          "answer": "Börja med att beskriva ditt företags situation och vilka frågor du behöver hjälp med. Det ger en grund för att välja rätt redovisningstjänster eller rådgivning."
         }
       ]
     },
     "contact": {
       "eyebrow": "KONTAKT",
       "title": "Låt oss prata\nom din ekonomi.",
-      "description": "Har du en fråga eller vill du komma igång? Hör av dig, så tar vi nästa steg tillsammans.",
+      "description": "K.Y Redovisning & Ekonomi AB finns på Myrstuguvägen 145 i Vårby. Redovisning och ekonomisk rådgivning för företag.",
       "addressLabel": "Besök oss",
       "emailLabel": "Mejla oss",
       "phoneLabel": "Ring oss",
       "hoursLabel": "Öppettider",
-      "hours": "Måndag–fredag, 09:00–20:00",
+      "hours": "",
       "mapCta": "Visa på karta",
       "bookingCta": "Skicka en bokningsförfrågan",
-      "subtitle": "Har du en fråga eller vill du komma igång? Hör av dig, så tar vi nästa steg tillsammans.",
+      "subtitle": "K.Y Redovisning & Ekonomi AB finns på Myrstuguvägen 145 i Vårby. Redovisning och ekonomisk rådgivning för företag.",
       "cta": "Skicka en bokningsförfrågan",
       "office": "Besök oss",
       "maps": "Visa på karta"
@@ -218,11 +207,11 @@ window.EKO_COPY = {
       "otherService": "Jag är osäker / något annat",
       "handoffMessage": "Din e-postapp öppnas med en bokningsförfrågan. Skicka mejlet för att kontakta oss. Tid och upplägg behöver bekräftas med oss.",
       "handoffSuccess": "Din förfrågan är förberedd. Skicka den i din e-postapp för att kontakta oss.",
-      "emailSubject": "Bokningsförfrågan — Eko-Rätt AB",
-      "emailIntro": "Hej Eko-Rätt! Jag vill gärna boka ett samtal.",
-      "emailFallback": "Om din e-postapp inte öppnas kan du mejla oss på Ekorett@gmail.com.",
+      "emailSubject": "Bokningsförfrågan — K.Y Redovisning & Ekonomi AB",
+      "emailIntro": "Hej K.Y! Jag vill gärna boka ett samtal.",
+      "emailFallback": "",
       "validationMessage": "Fyll i ditt namn, en giltig e-postadress och välj en tjänst.",
-      "eyebrow": "Eko-Rätt AB",
+      "eyebrow": "K.Y Redovisning & Ekonomi AB",
       "subtitle": "Berätta kort vad du behöver hjälp med och föreslå en tid.",
       "name": "Namn",
       "email": "E-post",
@@ -238,10 +227,11 @@ window.EKO_COPY = {
       "optional": "Valfritt",
       "weekendError": "Välj ett framtida datum, måndag till fredag.",
       "dateError": "Välj ett framtida datum, måndag till fredag.",
-      "feedback": "Din förfrågan är förberedd. Skicka den i din e-postapp för att kontakta oss."
+      "feedback": "Din förfrågan är förberedd. Skicka den i din e-postapp för att kontakta oss.",
+      "unavailable": "Bokning är tillfälligt otillgänglig."
     },
     "footer": {
-      "description": "Redovisning och skatterådgivning. Från Stockholm, för hela Sverige.",
+      "description": "Redovisning och ekonomisk rådgivning för företag. Med bas i Vårby.",
       "rights": "Alla rättigheter förbehållna.",
       "backToTop": "Till toppen",
       "top": "Till toppen",
@@ -252,7 +242,7 @@ window.EKO_COPY = {
       "language": "Välj språk"
     },
     "collage": {
-      "sectionLabel": "EKO-RÄTT I VARDAGEN",
+      "sectionLabel": "K.Y I VARDAGEN",
       "sectionHeading": "Från dagens siffror till nästa steg.",
       "panels": [
         {
@@ -292,19 +282,19 @@ window.EKO_COPY = {
       "book": "Book a conversation"
     },
     "hero": {
-      "eyebrow": "ACCOUNTING IN STOCKHOLM",
+      "eyebrow": "ACCOUNTING IN VÅRBY",
       "title": "Your finances.\nIn good order.",
-      "description": "Bookkeeping, tax returns and advice for businesses and individuals. From Stockholm, across Sweden.",
+      "description": "Bookkeeping, tax returns and advice for businesses. Based in Vårby.",
       "primaryCta": "Book a conversation",
       "secondaryCta": "Explore our services",
-      "locationNote": "Stockholm · Across Sweden",
-      "subtitle": "Bookkeeping, tax returns and advice for businesses and individuals. From Stockholm, across Sweden.",
+      "locationNote": "Vårby · Accounting & finance",
+      "subtitle": "Bookkeeping, tax returns and advice for businesses. Based in Vårby.",
       "cta": "Book a conversation",
       "artNote": "We look after the numbers.",
       "strip": "Accounting · Tax · Advice"
     },
     "intro": {
-      "eyebrow": "EKO-RÄTT AB",
+      "eyebrow": "K.Y Redovisning & Ekonomi AB",
       "title": "More room for what you want to do.",
       "body": "Your finances need attention. We help with day-to-day administration, annual reporting and the questions in between. Choose the support you need, from bookkeeping to tax advice.",
       "cta": "Explore our services"
@@ -331,7 +321,7 @@ window.EKO_COPY = {
           "id": "tax",
           "eyebrow": "02",
           "title": "Tax returns",
-          "description": "Support with tax returns and reporting for businesses and individuals.",
+          "description": "Support with tax returns and reporting for businesses.",
           "items": [
             "VAT and income tax returns",
             "Employee withholding tax and employer contributions",
@@ -369,9 +359,9 @@ window.EKO_COPY = {
       ]
     },
     "about": {
-      "eyebrow": "ABOUT EKO-RÄTT",
+      "eyebrow": "ABOUT K.Y",
       "title": "A conversation is a good place to start.",
-      "body": "Eko-Rätt AB provides accounting and tax advice from Bandhagen in Stockholm. We help businesses with financial administration and reporting, and individuals with tax returns and financial guidance.",
+      "body": "K.Y Redovisning & Ekonomi AB offers accounting and financial advice for businesses, based in Vårby. We help with financial administration, reporting and questions about your company's finances.",
       "benefits": [
         {
           "title": "Everyday tasks together",
@@ -391,7 +381,7 @@ window.EKO_COPY = {
         {
           "number": "01",
           "title": "Tell us what you need",
-          "description": "Contact us by phone, email or an appointment request."
+          "description": "Prepare a short description of your business and the financial support you need."
         },
         {
           "number": "02",
@@ -415,27 +405,27 @@ window.EKO_COPY = {
           "answer": "We help with ongoing bookkeeping, payroll, invoicing, VAT and tax returns, year-end accounts, annual reports, financial advice and tax consulting."
         },
         {
-          "question": "Do you work with businesses and individuals?",
-          "answer": "Yes. We help businesses with financial administration and reporting, and individuals with tax returns and financial guidance. We are based in Stockholm and provide services across Sweden."
+          "question": "Who do you work with?",
+          "answer": "We help businesses with accounting, financial administration and advice. The right support depends on your company's needs."
         },
         {
           "question": "How do I get started?",
-          "answer": "Call, email or send an appointment request. We start by discussing what you need and the support that fits. A request is not a confirmed appointment."
+          "answer": "Start by describing your company's situation and the questions you need help with. This provides a basis for choosing suitable accounting services or advice."
         }
       ]
     },
     "contact": {
       "eyebrow": "CONTACT",
       "title": "Let's talk\nabout your finances.",
-      "description": "Have a question or ready to get started? Get in touch and we can take the next step together.",
+      "description": "K.Y Redovisning & Ekonomi AB is located at Myrstuguvägen 145 in Vårby. Accounting and financial advice for businesses.",
       "addressLabel": "Visit us",
       "emailLabel": "Email us",
       "phoneLabel": "Call us",
       "hoursLabel": "Office hours",
-      "hours": "Monday–Friday, 09:00–20:00",
+      "hours": "",
       "mapCta": "View on map",
       "bookingCta": "Send an appointment request",
-      "subtitle": "Have a question or ready to get started? Get in touch and we can take the next step together.",
+      "subtitle": "K.Y Redovisning & Ekonomi AB is located at Myrstuguvägen 145 in Vårby. Accounting and financial advice for businesses.",
       "cta": "Send an appointment request",
       "office": "Visit us",
       "maps": "View on map"
@@ -458,11 +448,11 @@ window.EKO_COPY = {
       "otherService": "I'm unsure / something else",
       "handoffMessage": "Your email app will open with an appointment request. Send the email to contact us. The time and arrangements need to be confirmed with us.",
       "handoffSuccess": "Your request is prepared. Send it in your email app to contact us.",
-      "emailSubject": "Appointment request — Eko-Rätt AB",
-      "emailIntro": "Hello Eko-Rätt! I would like to arrange a conversation.",
-      "emailFallback": "If your email app does not open, email us at Ekorett@gmail.com.",
+      "emailSubject": "Appointment request — K.Y Redovisning & Ekonomi AB",
+      "emailIntro": "Hello K.Y! I would like to arrange a conversation.",
+      "emailFallback": "",
       "validationMessage": "Enter your name, a valid email address and choose a service.",
-      "eyebrow": "Eko-Rätt AB",
+      "eyebrow": "K.Y Redovisning & Ekonomi AB",
       "subtitle": "Tell us briefly what you need help with and suggest a time.",
       "name": "Name",
       "email": "Email",
@@ -478,10 +468,11 @@ window.EKO_COPY = {
       "optional": "Optional",
       "weekendError": "Choose a future date, Monday to Friday.",
       "dateError": "Choose a future date, Monday to Friday.",
-      "feedback": "Your request is prepared. Send it in your email app to contact us."
+      "feedback": "Your request is prepared. Send it in your email app to contact us.",
+      "unavailable": "Booking is temporarily unavailable."
     },
     "footer": {
-      "description": "Accounting and tax advice. From Stockholm, across Sweden.",
+      "description": "Accounting and financial advice for businesses. Based in Vårby.",
       "rights": "All rights reserved.",
       "backToTop": "Back to top",
       "top": "Back to top",
@@ -492,7 +483,7 @@ window.EKO_COPY = {
       "language": "Choose language"
     },
     "collage": {
-      "sectionLabel": "EVERYDAY EKO-RÄTT",
+      "sectionLabel": "EVERYDAY K.Y",
       "sectionHeading": "From today's numbers to your next step.",
       "panels": [
         {
@@ -532,19 +523,19 @@ window.EKO_COPY = {
       "book": "Κλείστε ένα ραντεβού"
     },
     "hero": {
-      "eyebrow": "ΛΟΓΙΣΤΙΚΕΣ ΥΠΗΡΕΣΙΕΣ ΣΤΗ ΣΤΟΚΧΟΛΜΗ",
+      "eyebrow": "ΛΟΓΙΣΤΙΚΕΣ ΥΠΗΡΕΣΙΕΣ ΣΤΟ VÅRBY",
       "title": "Τα οικονομικά σας.\nΣε τάξη.",
-      "description": "Τήρηση βιβλίων, φορολογικές δηλώσεις και συμβουλές για επιχειρήσεις και ιδιώτες. Από τη Στοκχόλμη, για όλη τη Σουηδία.",
+      "description": "Τήρηση βιβλίων, φορολογικές δηλώσεις και συμβουλές για επιχειρήσεις. Με βάση το Vårby.",
       "primaryCta": "Κλείστε ένα ραντεβού",
       "secondaryCta": "Δείτε τις υπηρεσίες μας",
-      "locationNote": "Στοκχόλμη · Όλη η Σουηδία",
-      "subtitle": "Τήρηση βιβλίων, φορολογικές δηλώσεις και συμβουλές για επιχειρήσεις και ιδιώτες. Από τη Στοκχόλμη, για όλη τη Σουηδία.",
+      "locationNote": "Vårby · Λογιστική & οικονομικά",
+      "subtitle": "Τήρηση βιβλίων, φορολογικές δηλώσεις και συμβουλές για επιχειρήσεις. Με βάση το Vårby.",
       "cta": "Κλείστε ένα ραντεβού",
       "artNote": "Φροντίζουμε τους αριθμούς σας.",
       "strip": "Λογιστική · Φορολογία · Συμβουλευτική"
     },
     "intro": {
-      "eyebrow": "EKO-RÄTT AB",
+      "eyebrow": "K.Y Redovisning & Ekonomi AB",
       "title": "Περισσότερος χρόνος για όσα θέλετε να κάνετε.",
       "body": "Τα οικονομικά σας χρειάζονται προσοχή. Σας βοηθάμε με την καθημερινή διαχείριση, τις ετήσιες αναφορές και τα ερωτήματα που προκύπτουν. Επιλέξτε την υποστήριξη που χρειάζεστε, από την τήρηση βιβλίων έως τη φορολογική συμβουλευτική.",
       "cta": "Δείτε τις υπηρεσίες μας"
@@ -571,7 +562,7 @@ window.EKO_COPY = {
           "id": "tax",
           "eyebrow": "02",
           "title": "Φορολογικές δηλώσεις",
-          "description": "Υποστήριξη με φορολογικές δηλώσεις και αναφορές για επιχειρήσεις και ιδιώτες.",
+          "description": "Υποστήριξη με φορολογικές δηλώσεις και αναφορές για επιχειρήσεις.",
           "items": [
             "Δηλώσεις ΦΠΑ και φόρου εισοδήματος",
             "Παρακράτηση φόρου και εργοδοτικές εισφορές",
@@ -609,9 +600,9 @@ window.EKO_COPY = {
       ]
     },
     "about": {
-      "eyebrow": "ΣΧΕΤΙΚΑ ΜΕ ΤΗΝ EKO-RÄTT",
+      "eyebrow": "ΣΧΕΤΙΚΑ ΜΕ ΤΗΝ K.Y",
       "title": "Μια συζήτηση είναι μια καλή αρχή.",
-      "body": "Η Eko-Rätt AB παρέχει λογιστικές υπηρεσίες και φορολογική συμβουλευτική με έδρα το Bandhagen στη Στοκχόλμη. Βοηθάμε επιχειρήσεις με την οικονομική διαχείριση και τις αναφορές, και ιδιώτες με φορολογικές δηλώσεις και οικονομική καθοδήγηση.",
+      "body": "Η K.Y Redovisning & Ekonomi AB προσφέρει λογιστικές υπηρεσίες και οικονομική συμβουλευτική για επιχειρήσεις, με βάση το Vårby. Σας βοηθάμε με την οικονομική διαχείριση, τις αναφορές και τα ερωτήματα που αφορούν τα οικονομικά της εταιρείας σας.",
       "benefits": [
         {
           "title": "Συγκεντρωμένη καθημερινή διαχείριση",
@@ -631,7 +622,7 @@ window.EKO_COPY = {
         {
           "number": "01",
           "title": "Πείτε μας τι χρειάζεστε",
-          "description": "Επικοινωνήστε τηλεφωνικά, με email ή με αίτημα για ραντεβού."
+          "description": "Προετοιμάστε μια σύντομη περιγραφή της επιχείρησής σας και της οικονομικής υποστήριξης που χρειάζεστε."
         },
         {
           "number": "02",
@@ -655,27 +646,27 @@ window.EKO_COPY = {
           "answer": "Σας βοηθάμε με την τήρηση βιβλίων, τη μισθοδοσία, την τιμολόγηση, τις δηλώσεις ΦΠΑ και φόρου, το κλείσιμο χρήσης, τις ετήσιες εκθέσεις και την οικονομική και φορολογική συμβουλευτική."
         },
         {
-          "question": "Εξυπηρετείτε επιχειρήσεις και ιδιώτες;",
-          "answer": "Ναι. Βοηθάμε επιχειρήσεις με την οικονομική διαχείριση και τις αναφορές, και ιδιώτες με τις φορολογικές δηλώσεις και την οικονομική καθοδήγηση. Βρισκόμαστε στη Στοκχόλμη και παρέχουμε υπηρεσίες σε όλη τη Σουηδία."
+          "question": "Ποιους εξυπηρετείτε;",
+          "answer": "Βοηθάμε επιχειρήσεις με λογιστικές υπηρεσίες, οικονομική διαχείριση και συμβουλευτική. Η κατάλληλη υποστήριξη εξαρτάται από τις ανάγκες της εταιρείας σας."
         },
         {
           "question": "Πώς μπορώ να ξεκινήσω;",
-          "answer": "Καλέστε μας, στείλτε email ή υποβάλετε αίτημα για ραντεβού. Ξεκινάμε συζητώντας τις ανάγκες σας και την κατάλληλη υποστήριξη. Το αίτημα δεν αποτελεί επιβεβαιωμένο ραντεβού."
+          "answer": "Ξεκινήστε περιγράφοντας την κατάσταση της εταιρείας σας και τα ερωτήματα στα οποία χρειάζεστε βοήθεια. Έτσι διαμορφώνεται η βάση για την επιλογή κατάλληλων λογιστικών υπηρεσιών ή συμβουλευτικής."
         }
       ]
     },
     "contact": {
       "eyebrow": "ΕΠΙΚΟΙΝΩΝΙΑ",
       "title": "Ας μιλήσουμε\nγια τα οικονομικά σας.",
-      "description": "Έχετε κάποια ερώτηση ή θέλετε να ξεκινήσετε; Επικοινωνήστε μαζί μας για να κάνουμε το επόμενο βήμα.",
+      "description": "Η K.Y Redovisning & Ekonomi AB βρίσκεται στη Myrstuguvägen 145, στο Vårby. Λογιστικές υπηρεσίες και οικονομική συμβουλευτική για επιχειρήσεις.",
       "addressLabel": "Επισκεφθείτε μας",
       "emailLabel": "Στείλτε μας email",
       "phoneLabel": "Καλέστε μας",
       "hoursLabel": "Ώρες λειτουργίας",
-      "hours": "Δευτέρα–Παρασκευή, 09:00–20:00",
+      "hours": "",
       "mapCta": "Δείτε στον χάρτη",
       "bookingCta": "Στείλτε αίτημα για ραντεβού",
-      "subtitle": "Έχετε κάποια ερώτηση ή θέλετε να ξεκινήσετε; Επικοινωνήστε μαζί μας για να κάνουμε το επόμενο βήμα.",
+      "subtitle": "Η K.Y Redovisning & Ekonomi AB βρίσκεται στη Myrstuguvägen 145, στο Vårby. Λογιστικές υπηρεσίες και οικονομική συμβουλευτική για επιχειρήσεις.",
       "cta": "Στείλτε αίτημα για ραντεβού",
       "office": "Επισκεφθείτε μας",
       "maps": "Δείτε στον χάρτη"
@@ -698,11 +689,11 @@ window.EKO_COPY = {
       "otherService": "Δεν είμαι σίγουρος/η / κάτι άλλο",
       "handoffMessage": "Θα ανοίξει η εφαρμογή email με ένα αίτημα για ραντεβού. Στείλτε το email για να επικοινωνήσετε μαζί μας. Η ώρα και οι λεπτομέρειες χρειάζονται επιβεβαίωση από εμάς.",
       "handoffSuccess": "Το αίτημά σας είναι έτοιμο. Στείλτε το από την εφαρμογή email για να επικοινωνήσετε μαζί μας.",
-      "emailSubject": "Αίτημα για ραντεβού — Eko-Rätt AB",
-      "emailIntro": "Γεια σας Eko-Rätt! Θα ήθελα να κανονίσουμε ένα ραντεβού.",
-      "emailFallback": "Αν η εφαρμογή email δεν ανοίξει, γράψτε μας στο Ekorett@gmail.com.",
+      "emailSubject": "Αίτημα για ραντεβού — K.Y Redovisning & Ekonomi AB",
+      "emailIntro": "Γεια σας K.Y! Θα ήθελα να κανονίσουμε ένα ραντεβού.",
+      "emailFallback": "",
       "validationMessage": "Συμπληρώστε το όνομά σας, μια έγκυρη διεύθυνση email και επιλέξτε υπηρεσία.",
-      "eyebrow": "Eko-Rätt AB",
+      "eyebrow": "K.Y Redovisning & Ekonomi AB",
       "subtitle": "Πείτε μας σύντομα πού χρειάζεστε βοήθεια και προτείνετε μια ώρα.",
       "name": "Όνομα",
       "email": "Email",
@@ -718,10 +709,11 @@ window.EKO_COPY = {
       "optional": "Προαιρετικό",
       "weekendError": "Επιλέξτε μια μελλοντική ημερομηνία, από Δευτέρα έως Παρασκευή.",
       "dateError": "Επιλέξτε μια μελλοντική ημερομηνία, από Δευτέρα έως Παρασκευή.",
-      "feedback": "Το αίτημά σας είναι έτοιμο. Στείλτε το από την εφαρμογή email για να επικοινωνήσετε μαζί μας."
+      "feedback": "Το αίτημά σας είναι έτοιμο. Στείλτε το από την εφαρμογή email για να επικοινωνήσετε μαζί μας.",
+      "unavailable": "Η κράτηση ραντεβού δεν είναι διαθέσιμη προσωρινά."
     },
     "footer": {
-      "description": "Λογιστικές υπηρεσίες και φορολογική συμβουλευτική. Από τη Στοκχόλμη, για όλη τη Σουηδία.",
+      "description": "Λογιστικές υπηρεσίες και οικονομική συμβουλευτική για επιχειρήσεις. Με βάση το Vårby.",
       "rights": "Με επιφύλαξη παντός δικαιώματος.",
       "backToTop": "Επιστροφή στην κορυφή",
       "top": "Επιστροφή στην κορυφή",
@@ -732,7 +724,7 @@ window.EKO_COPY = {
       "language": "Επιλέξτε γλώσσα"
     },
     "collage": {
-      "sectionLabel": "Η EKO-RÄTT ΣΤΗΝ ΚΑΘΗΜΕΡΙΝΟΤΗΤΑ",
+      "sectionLabel": "Η K.Y ΣΤΗΝ ΚΑΘΗΜΕΡΙΝΟΤΗΤΑ",
       "sectionHeading": "Από τα σημερινά στοιχεία στο επόμενο βήμα σας.",
       "panels": [
         {
@@ -772,19 +764,19 @@ window.EKO_COPY = {
       "book": "Rezervo një takim"
     },
     "hero": {
-      "eyebrow": "KONTABILITET NË STOKHOLM",
+      "eyebrow": "KONTABILITET NË VÅRBY",
       "title": "Financat tuaja.\nNë rregull.",
-      "description": "Kontabilitet, deklarata tatimore dhe këshillim për biznese dhe individë. Nga Stokholmi, për të gjithë Suedinë.",
+      "description": "Kontabilitet, deklarata tatimore dhe këshillim për biznese. Me bazë në Vårby.",
       "primaryCta": "Rezervo një takim",
       "secondaryCta": "Shiko shërbimet tona",
-      "locationNote": "Stokholm · Në të gjithë Suedinë",
-      "subtitle": "Kontabilitet, deklarata tatimore dhe këshillim për biznese dhe individë. Nga Stokholmi, për të gjithë Suedinë.",
+      "locationNote": "Vårby · Kontabilitet & financa",
+      "subtitle": "Kontabilitet, deklarata tatimore dhe këshillim për biznese. Me bazë në Vårby.",
       "cta": "Rezervo një takim",
       "artNote": "Ne kujdesemi për shifrat.",
       "strip": "Kontabilitet · Tatime · Këshillim"
     },
     "intro": {
-      "eyebrow": "EKO-RÄTT AB",
+      "eyebrow": "K.Y Redovisning & Ekonomi AB",
       "title": "Më shumë hapësirë për gjërat që dëshironi të bëni.",
       "body": "Financat tuaja kërkojnë vëmendje. Ju ndihmojmë me administrimin e përditshëm, raportet vjetore dhe pyetjet që lindin gjatë rrugës. Zgjidhni mbështetjen që ju nevojitet, nga kontabiliteti te këshillimi tatimor.",
       "cta": "Shiko shërbimet tona"
@@ -811,7 +803,7 @@ window.EKO_COPY = {
           "id": "tax",
           "eyebrow": "02",
           "title": "Deklarata tatimore",
-          "description": "Mbështetje për deklaratat tatimore dhe raportimin e bizneseve dhe individëve.",
+          "description": "Mbështetje për deklaratat tatimore dhe raportimin e bizneseve.",
           "items": [
             "Deklarata të TVSH-së dhe tatimit mbi të ardhurat",
             "Tatimi në burim dhe kontributet e punëdhënësit",
@@ -849,9 +841,9 @@ window.EKO_COPY = {
       ]
     },
     "about": {
-      "eyebrow": "RRETH EKO-RÄTT",
+      "eyebrow": "RRETH K.Y",
       "title": "Një bisedë është një fillim i mirë.",
-      "body": "Eko-Rätt AB ofron kontabilitet dhe këshillim tatimor nga Bandhagen në Stokholm. Ndihmojmë bizneset me administrimin financiar dhe raportimin, ndërsa individët me deklaratat tatimore dhe udhëzimin financiar.",
+      "body": "K.Y Redovisning & Ekonomi AB ofron kontabilitet dhe këshillim financiar për biznese, me bazë në Vårby. Ju ndihmojmë me administrimin financiar, raportimin dhe pyetjet që lidhen me financat e kompanisë suaj.",
       "benefits": [
         {
           "title": "Detyrat e përditshme së bashku",
@@ -871,7 +863,7 @@ window.EKO_COPY = {
         {
           "number": "01",
           "title": "Na tregoni çfarë ju nevojitet",
-          "description": "Na kontaktoni me telefon, email ose një kërkesë për takim."
+          "description": "Përgatitni një përshkrim të shkurtër të biznesit tuaj dhe të mbështetjes financiare që ju nevojitet."
         },
         {
           "number": "02",
@@ -895,27 +887,27 @@ window.EKO_COPY = {
           "answer": "Ndihmojmë me kontabilitetin e vazhdueshëm, pagat, faturimin, deklaratat e TVSH-së dhe tatimeve, mbylljen vjetore, raportet vjetore, këshillimin financiar dhe tatimor."
         },
         {
-          "question": "Punoni me biznese dhe individë?",
-          "answer": "Po. Ndihmojmë bizneset me administrimin financiar dhe raportimin, ndërsa individët me deklaratat tatimore dhe udhëzimin financiar. Jemi në Stokholm dhe ofrojmë shërbime në të gjithë Suedinë."
+          "question": "Me kë punoni?",
+          "answer": "Ndihmojmë bizneset me kontabilitet, administrim financiar dhe këshillim. Mbështetja e duhur varet nga nevojat e kompanisë suaj."
         },
         {
           "question": "Si mund të filloj?",
-          "answer": "Na telefononi, na dërgoni email ose një kërkesë për takim. Fillojmë duke diskutuar nevojat tuaja dhe mbështetjen që ju përshtatet. Një kërkesë nuk është një takim i konfirmuar."
+          "answer": "Filloni duke përshkruar situatën e kompanisë suaj dhe pyetjet për të cilat ju nevojitet ndihmë. Kjo krijon bazën për të zgjedhur shërbimet e përshtatshme të kontabilitetit ose këshillimit."
         }
       ]
     },
     "contact": {
       "eyebrow": "KONTAKTI",
       "title": "Le të flasim\npër financat tuaja.",
-      "description": "Keni një pyetje apo dëshironi të filloni? Na kontaktoni që të bëjmë së bashku hapin tjetër.",
+      "description": "K.Y Redovisning & Ekonomi AB ndodhet në Myrstuguvägen 145, Vårby. Kontabilitet dhe këshillim financiar për biznese.",
       "addressLabel": "Na vizitoni",
       "emailLabel": "Na shkruani",
       "phoneLabel": "Na telefononi",
       "hoursLabel": "Orari i zyrës",
-      "hours": "E hënë–e premte, 09:00–20:00",
+      "hours": "",
       "mapCta": "Shiko në hartë",
       "bookingCta": "Dërgo një kërkesë për takim",
-      "subtitle": "Keni një pyetje apo dëshironi të filloni? Na kontaktoni që të bëjmë së bashku hapin tjetër.",
+      "subtitle": "K.Y Redovisning & Ekonomi AB ndodhet në Myrstuguvägen 145, Vårby. Kontabilitet dhe këshillim financiar për biznese.",
       "cta": "Dërgo një kërkesë për takim",
       "office": "Na vizitoni",
       "maps": "Shiko në hartë"
@@ -938,11 +930,11 @@ window.EKO_COPY = {
       "otherService": "Nuk jam i/e sigurt / diçka tjetër",
       "handoffMessage": "Aplikacioni juaj i emailit do të hapet me një kërkesë për takim. Dërgojeni emailin për të na kontaktuar. Orari dhe detajet duhet të konfirmohen me ne.",
       "handoffSuccess": "Kërkesa juaj është përgatitur. Dërgojeni nga aplikacioni i emailit për të na kontaktuar.",
-      "emailSubject": "Kërkesë për takim — Eko-Rätt AB",
-      "emailIntro": "Përshëndetje Eko-Rätt! Dëshiroj të caktoj një takim.",
-      "emailFallback": "Nëse aplikacioni i emailit nuk hapet, na shkruani në Ekorett@gmail.com.",
+      "emailSubject": "Kërkesë për takim — K.Y Redovisning & Ekonomi AB",
+      "emailIntro": "Përshëndetje K.Y! Dëshiroj të caktoj një takim.",
+      "emailFallback": "",
       "validationMessage": "Shkruani emrin, një adresë të vlefshme emaili dhe zgjidhni një shërbim.",
-      "eyebrow": "Eko-Rätt AB",
+      "eyebrow": "K.Y Redovisning & Ekonomi AB",
       "subtitle": "Na tregoni shkurt çfarë ndihme ju nevojitet dhe propozoni një orar.",
       "name": "Emri",
       "email": "Email",
@@ -958,10 +950,11 @@ window.EKO_COPY = {
       "optional": "Opsionale",
       "weekendError": "Zgjidhni një datë të ardhshme, nga e hëna deri të premten.",
       "dateError": "Zgjidhni një datë të ardhshme, nga e hëna deri të premten.",
-      "feedback": "Kërkesa juaj është përgatitur. Dërgojeni nga aplikacioni i emailit për të na kontaktuar."
+      "feedback": "Kërkesa juaj është përgatitur. Dërgojeni nga aplikacioni i emailit për të na kontaktuar.",
+      "unavailable": "Rezervimi është përkohësisht i padisponueshëm."
     },
     "footer": {
-      "description": "Kontabilitet dhe këshillim tatimor. Nga Stokholmi, për të gjithë Suedinë.",
+      "description": "Kontabilitet dhe këshillim financiar për biznese. Me bazë në Vårby.",
       "rights": "Të gjitha të drejtat të rezervuara.",
       "backToTop": "Kthehu në krye",
       "top": "Kthehu në krye",
@@ -972,7 +965,7 @@ window.EKO_COPY = {
       "language": "Zgjidhni gjuhën"
     },
     "collage": {
-      "sectionLabel": "EKO-RÄTT NË PËRDITSHMËRI",
+      "sectionLabel": "K.Y NË PËRDITSHMËRI",
       "sectionHeading": "Nga shifrat e sotme te hapi juaj i radhës.",
       "panels": [
         {

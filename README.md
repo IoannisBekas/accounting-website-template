@@ -1,6 +1,6 @@
-# Eko-Rätt AB website
+# K.Y Redovisning & Ekonomi AB website
 
-A responsive, four-language accounting website with a Visify-inspired visual direction and original Eko-Rätt content.
+A responsive, four-language accounting website with a Visify-inspired visual direction and original K.Y content.
 
 Public website: https://ioannisbekas.github.io/eko-ratt/
 
@@ -10,9 +10,9 @@ Edit `index.template.html`, `docs/assets/styles.css`, `docs/assets/app.js` and t
 
 Motion is in `docs/assets/motion.js` and `motion.css`: word-by-word scroll entrances, an original animated financial SVG collage, drawn annotations, pointer/scroll depth and lime hover shadows. Animations pause offscreen and can be paused by the visitor. The operating system's reduced-motion preference is respected. All graphics remain visible without the motion script.
 
-The appointment form prepares an email to `Ekorett@gmail.com`. The visitor sends the request in their email application, and Eko-Rätt confirms the appointment. There is no automatic reservation or email-delivery backend.
+Phone, email and opening hours are intentionally blank. Booking buttons and email submission are disabled until a recipient address is configured in the common copy data. The visiting address is Myrstuguvägen 145, 143 32 Vårby; organisation number 559337-5149.
 
-The original Eko-Rätt logos are included unchanged. DM Sans and Mynerve are bundled with their SIL Open Font License files in `docs/assets`.
+Original K.Y vector wordmarks and a matching favicon replace the previous brand assets. These are redesign artwork, rather than an existing official company logo. DM Sans and Mynerve remain bundled with their license files.
 
 Three original grayscale photographic collages introduce everyday bookkeeping, year-end accounts and advisory services. The artwork was generated with the built-in image generation tool and is decorative; the multilingual captions provide all service information. Layout and gentle drift animation are in `docs/assets/collage.css`. Existing pause, visibility and reduced-motion controls apply.
 

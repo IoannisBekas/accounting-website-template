@@ -1,11 +1,11 @@
 (() => {
   'use strict';
   const copy = window.EKO_COPY;
-  const languages = ['sv', 'en', 'el', 'sq'];
+  const languages = ['sv', 'en'];
   const basePath = document.querySelector('meta[name="site-base"]').content;
   const origin = new URL(basePath, location.origin).href.replace(/\/$/, '');
   const icons = ['book', 'file', 'chart', 'advice'];
-  const titles = {sv:'Redovisning & skatterådgivning i Vårby',en:'Accounting & tax services in Vårby',el:'Λογιστικές υπηρεσίες στο Vårby',sq:'Kontabilitet dhe këshillim tatimor në Vårby'};
+  const titles = {sv:'Redovisning & skatterådgivning i Vårby',en:'Accounting & tax services in Vårby'};
   const timeSlots = ['09:00','09:30','10:00','10:30','11:00','11:30','13:00','13:30','14:00','14:30','15:00','15:30','16:00','16:30','17:00','17:30','18:00','18:30','19:00','19:30'];
   const pathLanguage = location.pathname.slice(basePath.length).split('/').filter(Boolean)[0];
   let language = languages.includes(pathLanguage) ? pathLanguage : 'sv';

@@ -8,8 +8,8 @@ const copyScript = fs.readFileSync(path.join(output, 'assets/copy.js'), 'utf8');
 const copy = JSON.parse(copyScript.replace(/^window\.EKO_COPY\s*=\s*/, '').replace(/;\s*$/, ''));
 const origin = 'https://ioannisbekas.github.io/ky-redovisning';
 const basePath = '/ky-redovisning/';
-const routes = {sv:'/',en:'/en/',el:'/el/',sq:'/sq/'};
-const titles = {sv:'Redovisning & skatterådgivning i Vårby',en:'Accounting & tax services in Vårby',el:'Λογιστικές υπηρεσίες στο Vårby',sq:'Kontabilitet dhe këshillim tatimor në Vårby'};
+const routes = {sv:'/',en:'/en/'};
+const titles = {sv:'Redovisning & skatterådgivning i Vårby',en:'Accounting & tax services in Vårby'};
 const get = (object, key) => key.split('.').reduce((item, part) => item?.[part], object);
 const escape = value => String(value).replace(/[&<>"']/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
 for (const [language, route] of Object.entries(routes)) {
@@ -36,4 +36,4 @@ for (const [language, route] of Object.entries(routes)) {
 }
 fs.writeFileSync(path.join(output, 'robots.txt'), `User-agent: *\nAllow: /\nSitemap: ${origin}/sitemap.xml\n`);
 fs.writeFileSync(path.join(output, 'sitemap.xml'), `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${Object.values(routes).map(route => `<url><loc>${origin}${route}</loc></url>`).join('')}</urlset>\n`);
-console.log('Prepared and validated 4 language pages, Swedish alias, sitemap and robots.');
+console.log('Prepared and validated 2 language pages, Swedish alias, sitemap and robots.');

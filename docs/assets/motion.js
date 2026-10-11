@@ -9,9 +9,7 @@
   const art = document.querySelector('.hero-art');
   const labels = {
     sv: {pause: 'Pausa rörelser', play: 'Starta rörelser'},
-    en: {pause: 'Pause motion', play: 'Resume motion'},
-    el: {pause: 'Παύση κινήσεων', play: 'Συνέχιση κινήσεων'},
-    sq: {pause: 'Ndalo lëvizjet', play: 'Vazhdo lëvizjet'}
+    en: {pause: 'Pause motion', play: 'Resume motion'}
   };
   let paused = false;
   let pointerX = 0;
